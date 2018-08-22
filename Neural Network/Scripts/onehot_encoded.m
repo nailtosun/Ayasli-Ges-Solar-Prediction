@@ -1,23 +1,49 @@
 for i = 1:30354
-    if data(i,17) > 0 && data(i,17) < 500
+    if data(i,15) > 0 && data(i,15) < 250
         newEncodedVector(i,:) = [0 0 0 0 0 0 0 0 0 0];
-    elseif data(i,17) >= 500 && data(i,17) < 1000
+    elseif data(i,15) >= 250 && data(i,15) < 500
         newEncodedVector(i,:) = [0 0 0 0 0 0 0 0 1 0];
-    elseif data(i,17) >= 1000 && data(i,17) < 2500
+    elseif data(i,15) >= 500 && data(i,15) < 1000
+        newEncodedVector(i,:) = [0 0 0 0 0 0 0 0 1 0];
+    elseif data(i,15) >= 1000 && data(i,15) < 2000
         newEncodedVector(i,:) = [0 0 0 0 0 0 0 1 0 0];
-    elseif data(i,17) >= 2500 && data(i,17) < 5000
+    elseif data(i,15) >= 2000 && data(i,15) < 3000
+        newEncodedVector(i,:) = [0 0 0 0 0 0 0 1 0 0];
+    elseif data(i,15) >= 3000 && data(i,15) < 4000
+        newEncodedVector(i,:) = [0 0 0 0 0 0 0 1 0 0];
+    elseif data(i,15) >= 4000 && data(i,15) < 5000
+        newEncodedVector(i,:) = [0 0 0 0 0 0 0 1 0 0];
+    elseif data(i,15) >= 5000 && data(i,15) < 6000
         newEncodedVector(i,:) = [0 0 0 0 0 0 1 0 0 0];
-    elseif data(i,17) >= 5000 && data(i,17) < 8000
+    elseif data(i,15) >= 6000 && data(i,15) < 7000
         newEncodedVector(i,:) = [0 0 0 0 0 1 0 0 0 0];
-    elseif data(i,17) >= 8000 && data(i,17) < 10000
+    elseif data(i,15) >= 7000 && data(i,15) < 8000
         newEncodedVector(i,:) = [0 0 0 0 1 0 0 0 0 0];
-    elseif data(i,17) >= 10000 && data(i,17) < 12500
+    elseif data(i,15) >= 8000 && data(i,15) < 9000
         newEncodedVector(i,:) = [0 0 0 1 0 0 0 0 0 0];
-    elseif data(i,17) >= 12500 && data(i,17) < 15000
+    elseif data(i,15) >= 9000 && data(i,15) < 10000
         newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
-    elseif data(i,17) == 0
+    elseif data(i,15) >= 10000 && data(i,15) < 11000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 11000 && data(i,15) < 12000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 12000 && data(i,15) < 13000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 13000 && data(i,15) < 14000
+        newEncodedVector(i,:) = [0 0 0 0 1 0 0 0 0 0];
+    elseif data(i,15) >= 14000 && data(i,15) < 15000
+        newEncodedVector(i,:) = [0 0 0 1 0 0 0 0 0 0];
+    elseif data(i,15) >= 15000 && data(i,15) < 16000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 16000 && data(i,15) < 17000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 17000 && data(i,15) < 18000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) >= 11000 && data(i,15) < 12000
+        newEncodedVector(i,:) = [0 0 1 0 0 0 0 0 0 0];
+    elseif data(i,15) == 0
         newEncodedVector(i,:) = [0 1 0 0 0 0 0 0 0 0];
-    elseif data(i,17) >= 15000 && data(i,17) < 40000
+    elseif data(i,15) >= 15000 && data(i,15) < 40000
         newEncodedVector(i,:) = [1 0 0 0 0 0 0 0 0 0];
     end
 end
