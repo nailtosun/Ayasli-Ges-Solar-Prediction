@@ -1,0 +1,19 @@
+Solar-Log - Yield overview of 23.01.17 - 13:05:08
+Day:
+    Total        21.69 kWh
+    Spec.         0.42 kWh/kWp
+    Max           7.56 kW
+    Target       54.33 kWh
+    Act. yield      39 %
+
+Month:
+    Total       1151.0 kWh
+    Spec.         22.3 kWh/kWp
+    Max          135.7 kWhMax
+    Average       47.9 kWh
+    Target      1259.3 kWh
+    Act. yield      91 %
+
+Year:
+    Total         1151 kWh
+    Spec.           22 kWh/kWp

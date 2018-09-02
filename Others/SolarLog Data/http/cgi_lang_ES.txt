@@ -1,0 +1,629 @@
+// language bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-19
+// Date    : 06.06.2008
+// Language: spanisch / espanol
+//
+// Anmerkungen:
+// 1. Die Übersetzung sollte möglichst weniger oder gleich viel Zeichen belegen als der Originaltext
+// 2. Umlaute und Sonderzeichen sollten als HTML-Code geschrieben werden:
+//      Zeichen   Ersetzung
+//          ä   &auml;
+//          Ä   &Auml;
+//          ö   &ouml;
+//          Ö   &Ouml;
+//          ü   &uuml;
+//          Ü   &Uuml;
+//          ß   &szlig;
+//          á   &aacute;
+//          í   &iacute;
+//          é   &eacute;
+//          ó   &oacute;
+//          ñ   &ntilde;
+// Menu structure
+#VISU_PC|Visualisaci&oacute;n PC
+#VISU_PDA|PDA
+#MENU_YIELD_DATA|Rendimiento
+#MENU_DIAGNOSIS|Diagn&oacute;stico
+#MENU_CONFIGURATION|Configuraci&oacute;n
+#MENU_LAN|LAN
+#MENU_GROUPS|Grupos
+#MENU_INVERTER|Inversor
+#MENU_FORECAST|Pron&oacute;stico
+#MENU_GRAPHICS|Gr&aacute;fica
+#MENU_BASIC|B&aacute;sico
+#MENU_EXPERT|Experto
+#MENU_INTERNAL|Interno
+#MENU_INTERNET|Internet
+#MENU_EMAIL|Email
+#MENU_SMS|SMS
+#MENU_EXPORT|WEB-Exportar
+#MENU_FAILURE|Error
+#MENU_BACKUP|Backup
+#MENU_SYSTEM|Sistema
+#MENU_UPDATE|Actualizaci&oacute;n
+
+
+// Haupt-Dialog / Main menu
+#INDEX_TITLE|Menú principal
+#NO_YIELD_DATA|No hay datos disponibles
+#LABEL_WELCOME|Bienvenido al men&uacute; principal
+#LABEL_FIRMWARE|Firmware
+#MSG_READING_SYSTIME|Tiempo del sistema es leido
+#LABEL_NO_INVERTERS| No reconoce inversor
+#LABEL_INVERTERS_RECOG|Inversor(es) reconocido(s)
+#LABEL_MENU_NAVIG|Por medio del men&uacute; arriba y a la izquierda se pueden abrir otras funciones
+#LABEL_LOGGING_DATA|esta registrando los datos
+
+// Ereignisprotokoll / events protocol
+#LABEL_EVENTPROT|Protocolo acotecimientos
+#LABEL_DEGRADATION|Degradaci&oacute;n
+
+// Dialog: Degradation
+#LABEL_DEGRAD_TITEL|C&aacute;lculo de degradaci&oacute;n
+#LABEL_TOP|Top
+#LABEL_MAXVAL|Valor m&aacute;ximo
+#LABEL_DATE|Fecha
+#LABEL_SPREIZUNG|Extensi&oacute;n
+#LABEL_BENCHMARK|Evaluaci&oacute;n
+#LABEL_HIT|Acierto
+#LABEL_AVRG_MAX|Promedio max.
+#LABEL_DEGRAD_INFO1|C&aacute;lculo de rendimiento de la instalaci&oacute;n solar
+#LABEL_DEGRAD_INFO2|Para esto se calcula para cada a&ntilde;o el "valor promedio m&aacute;ximo del día".
+#LABEL_DEGRAD_INFO3|Este se calcula sobre los valores m&aacute;ximos reales y un ajuste
+#LABEL_DEGRAD_INFO4| estad&iacute;stico para filtrar picos extremos. La comparaci&oacute;n de estos valores m&aacute;ximos
+#LABEL_DEGRAD_INFO5|permite concluir el rendimiento de la instalaci&oacute;n.
+#LABEL_DEGRAD_INFO6|La condici&oacute;n principal para la comparaci&oacute;n de datos es que existan suficientes datos por a&ntilde;o y
+#LABEL_DEGRAD_INFO7| la t&eacute;cnica de instalaci&oacute;n  sea id&eacute;ntica.
+#LABEL_ANALYSIS_1YEAR|An&aacute;lisis de datos por a&ntilde;o
+#LABEL_ANALYSIS_XYEARS|An&aacute;lisis de datos a trav&eacute;z de los a&ntilde;os
+#LABEL_UNTIL|hasta
+#LABEL_YEAR|A&ntilde;o
+#LABEL_NOT_ENOUGH_DATA|No hay suficinetes datos para el an&aacute;licis
+#LABEL_DEGRAD_INFO1B|Partiendo del registro actual se cuentan los datos hacia arriba y abajo
+#LABEL_DEGRAD_INFO2B|con una discordancia max. del 10%.
+#LABEL_DEGRAD_TAB|Tabla de degradaci&oacute;n
+#LABEL_AVRG_DAYMAX|Promedio m&aacute;ximo del d&iacute;a
+#LABEL_DECREASE|Disminuci&oacute;n
+
+// Dialog: Lan
+#LABEL_LAN_TITEL|Configuraci&oacute;n de la red
+#LABEL_LAN_SETTINGS|Configuraci&oacute;n de la red
+#LABEL_IP_ADR|Direcci&oacute;n IP
+#LABEL_SUBNET|Subnet Mask
+#LABEL_INTERNET_ACCESS| Acceso a internet
+#LABEL_NO_INTERNET| Ninguno
+#LABEL_ANALOG_MODEM| Modem an&aacute;logo
+#LABEL_GPRS_MODEM| Modem GPRS
+#LABEL_GPRS_MODEM_INTERN| Modem GPRS (Interno)
+#LABEL_ROUTER| Ruteador de Red
+#LABEL_ROUTER2|(DSL, Cable, ISDN)
+#LABEL_GATEWAY|Gateway
+#LABEL_DNS_SERVER|Servidor DNS externo
+#LABEL_MODEM_PACK| Paquete Modem
+#LABEL_I-BY-CALL|Internet-By-Call Nro.
+#LABEL_USERNAME|Nombre del usuario
+#LABEL_PASSWORD|Clave
+#LABEL_DIAL0|Marcar "0"
+#LABEL_NO_DIALTONE|Sin tono de marcar
+#LABEL_ALLOW_DIALIN|Permitir conecci&oacute;n
+#LABEL_DIALIN_PW|Clave conecci&oacute;n
+#LABEL_GPRS_PACK| Paquete GPRS
+#LABEL_CHOOSE_GPRS_PROV|Escoger proveedor
+#LABEL_SIM_PIN|SIM-PIN
+#LABEL_LAN_REBOOT|Despu&eacute;s de guardar reinicia.
+#LABEL_DHCP|Obtener autom&aacute;ticamente(DHCP)
+#LABEL_CONN_TIME|Duraci&oacute;n de la conecci&oacute;n
+#LABEL_KEEP_ONLINE|Permanecer en linea (solo tarifas fijas)
+
+// Dialog: Anlagengruppen
+#LABEL_GROUPS|Grupos de Instalaciones
+#LABEL_ADD_INV|Adicionar Inversores
+#LABEL_ALL_INV_ADDED|Todos los inversores han sido adjudicados.
+#LABEL_ADRESS|Direcci&oacute;n
+#LABEL_SERIALNR|Nro.de serie
+#LABEL_REMOVE_INV|Retirar inversor
+#LABEL_NO_INV|No hay adjudicaci&oacute;n de inversores
+#LABEL_NO_GROUPS|todos los inversores pertenecen a una instalaci&oacute;n
+#LABEL_GROUPS_ON|Los inversores se adjudican a grupos de instalaciones
+#LABEL_GROUP_DEF|Definici&oacute;n de grupo
+#LABEL_DESC|Nombre
+#LABEL_MAX_INV|INV (max.15)
+#LABEL_ADD|A&ntilde;adir
+#LABEL_DEL|Retirar
+#LABEL_SAVE|Guardar
+#LABEL_CANCEL|Salir
+
+// Dialog: Wechselrichter / Inverter
+#LABEL_CONFIG_INV|Configurar datos del inversor
+#LABEL_INV|Inversor
+#LABEL_INV_SHORT|INV
+#LABEL_NUMBER|N&uacute;mero
+#LABEL_NEW_NUMBER|Nuevo N&uacute;mero
+#LABEL_DEVICE_NAME|Denominaci&oacute;n
+#LABEL_ADR_SN|N&uacute;mero de serie
+#LABEL_INST_DC_POWER|Capacidad del generador
+#LABEL_PAC_CORR_FACTOR|Factor de correci&oacute;n Pac
+#LABEL_CORR_FACT_INFO|contador luz / contador inversor * 1000
+#LABEL_MODUL|Grupo
+#LABEL_FIELD|Paneles
+#LABEL_CONNECTED|Rendimiento Paneles
+#LABEL_DC_POWER|conectados
+#LABEL_STRING1|String 1
+#LABEL_STRING2|String 2
+#LABEL_STRING3|String 3
+#LABEL_MONITORING|Monitoreo
+#LABEL_MONI_INFO|Reconoce errores del inversor y anomal&iacute;as en el rendimiento del generador
+#LABEL_ACTIVATED|Activado
+#LABEL_DEACTIVATED|Desactivado
+#LABEL_NO_SHADOW|Sin sombra
+#LABEL_CLOCK|Hora
+#LABEL_MIN_POWER|Producci&oacute;n m&iacute;n.
+#LABEL_OF_DC_POWER|Producci&oacute;n del generador
+#LABEL_MSG_AS_EMAIL|Aviso por Email
+#LABEL_SMS|SMS
+#LABEL_DIFF|discordancia
+#LABEL_PERIOD_ERR|Duraci&oacute;n error de
+#LABEL_MINUTE|min.
+#LABEL_MAXIMUM|M&aacute;ximo
+#LABEL_MAX_MSG_DAY|avisos por d&iacute;a
+#LABEL_IS_SNOW| Hay que contar con cubierta de nieve constante?
+#LABEL_YES|Si
+#LABEL_NO|No
+#LABEL_SCALE|Gr&aacute;fica - Escala
+#LABEL_DEFINITION|Definici&oacute;n
+#LABEL_YSCALE|Eje Y
+#LABEL_VIEW_FOR|Visualisaci&oacute;n para
+#LABEL_DAY|D&iacute;a
+#LABEL_MONTH|Mes
+#LABEL_YEAR|A&ntilde;o
+#LABEL_ALLYEARS|Todos los a&ntilde;os
+#LABEL_MAX_YSCALE|Eje Y max.
+
+// Dialog: Prognose
+#LABEL_DEFINE_FORECAST|Definir los datos para el pron&oacute;stico de la instalaci&oacute;n
+#LABEL_SITE_DATA|Datos de la instalaci&oacute;n
+#LABEL_SITE_SIZE|Tama&ntilde;o de la instalaci&oacute;n
+#LABEL_SUBSIDARY|Bonificaci&oacute;n
+#LABEL_TARGET_CURRENT|C&aacute;lculo Real/Previsto
+#LABEL_YEARLY_TARGET|Rendimento previsto anual
+#LABEL_MONTHLY_PORTIONS|Porci&oacute;n mensual
+#LABEL_IN_TOTAL|Total
+#LABEL_JAN|Ene
+#LABEL_FEB|Feb
+#LABEL_MAR|Mar
+#LABEL_APR|Abr
+#LABEL_MAY|May
+#LABEL_JUN|Jun
+#LABEL_JUL|Jul
+#LABEL_AUG|Ago
+#LABEL_SEP|Sep
+#LABEL_OCT|Oct
+#LABEL_NOV|Nov
+#LABEL_DEC|Dic
+
+// Dialog: Grafik
+#LABEL_CONFIG_GRAPHICS|Configurar visualisaci&oacute;n de datos
+#LABEL_VISUAL|Visualisaci&oacute;n
+#LABEL_XSCALE|Eje X
+#LABEL_START_DAY|Inicio del d&iacute;a
+#LABEL_TIME_IN|Tiempo
+#LABEL_HOUR|en Horas
+#LABEL_END_DAY|Fin del d&iacute;a
+
+// Dialog: Internet
+#LABEL_TITEL_INTERNET|Informaci&oacute;n de la instalci&oacute;n para p&aacute;g. Web y banner
+#LABEL_HOMEPAGE|P&aacute;gina web
+#LABEL_TITEL|T&iacute;tulo
+#LABEL_OPERATOR|Gestor
+#LABEL_LOCATION|Localizaci&oacute;n
+#LABEL_MODULS|Paneles
+#LABEL_INST_POWER|Rendimiento
+#LABEL_START_OPERATION|Puesta en servicio
+#LABEL_ORIENTATION|Orientaci&oacute;n
+#LABEL_VISABLE_ON_HP|Visible en p&aacute;gina web
+#LABEL_BANNER|Banner
+#LABEL_LINE1|L&iacute;nea 1
+#LABEL_LINE2|L&iacute;nea 2
+#LABEL_LINE3|L&iacute;nea 3
+#LABEL_LINK_HP|Link en p&aacute;gina web
+
+#LABEL_TITEL_TXT|Nombre de la instalación
+#LABEL_OPERATOR_TXT|Nombre del gestor
+#LABEL_EMAIL_TXT|Contacto- dirección electrónica
+#LABEL_LOCATION_TXT|Ubicación instalación
+#LABEL_MODULS_TXT|Descripción paneles y fabricante
+#LABEL_INVERTER_TXT|Descripción inversor y fabricante
+#LABEL_INST_POWER_TXT|Tamaño de la instalación
+#LABEL_START_OPERATION_TXT|Fecha de instalación
+#LABEL_ORIENTATION_TXT|Inclinación paneles y orientación
+#LABEL_LINE1_TXT|Descripción  instal.
+#LABEL_LINE2_TXT|4,5 kwp en 99999 Muestra
+#LABEL_LINE3_TXT| en red desde enero 2008
+#LABEL_LINK_HP_TXT|www.solarlog-home.eu/usuario
+
+// Dialog: Email
+#TITEL_EMAIL|Configuraci&oacute;n mensaje por Email
+#LABEL_START_TESTMAIL|Iniciar test?
+#LABEL_EMAIL_SETTINGS|Configuraci&oacute;n  Email
+#LABEL_SMTP_SERVER|Servidor SMTP
+#LABEL_EMAIL_FROM|Email de
+#LABEL_EMAIL_TO|Email para
+#LABEL_EMAIL_NOTIFIC|Aviso por Email
+#LABEL_SEND_TIME|Hora de env&iacute;o
+#LABEL_MONDAY|Lu
+#LABEL_TUESDAY|Ma
+#LABEL_WEDNESDAY|Mi
+#LABEL_THURSDAY|Ju
+#LABEL_FRIDAY|Vi
+#LABEL_SATURDAY|Sa
+#LABEL_SUNDAY|Do
+#LABEL_LAST_TRANS|&Uacute;ltima transmisi&oacute;n
+#LABEL_STATUS|Estatus
+#LABEL_START_TRANS|Iniciar test
+
+// Dialog: SMS
+#TITEL_SMS|Configuraci&oacute;n aviso por SMS
+#LABEL_START_TESTSMS|Iniciar test?
+#LABEL_SMS_BASIC_SETTING|Configuraci&oacute;n SMS
+#LABEL_KEYWORD_SUBJECT|Palabra clave para tema
+#LABEL_SMS_NOTIFIC|Informe por SMS
+#LABEL_YIELD_IN_SUBJECT| Rendimiento en tema
+// Dialog: Export
+#TITEL_EXPORT|Configuraci&oacute;n de exportaci&oacute;n de datos autom&aacute;tico
+#LABEL_START_FTP|Iniciar test?
+#LABEL_START_CSV|Iniciar exportación de datos CSV?
+#LABEL_PLEASE_WAIT|Por favor espere
+#LABEL_DATA_EXPORT|Exportacivn c&iacute;clica
+#LABEL_FTP_SERVER|Servidor FTP
+#LABEL_DIRECTORY|Directorio
+#LABEL_UPDATE_INTERVAL|Intervalo de actualizaci&oacute;n
+#LABEL_MINUTE_SHORT|m
+#LABEL_HOUR_SHORT|h
+#LABEL_DAILY|Diario
+#LABEL_DATAFORMAT|Formato
+#LABEL_CSV_FORMAT|CSV
+#LABEL_MANUAL_EXPORT|Exportaci&oacute;n de datos manual
+#LABEL_CSV_FORMAT2|Formato CSV
+#LABEL_CURRENT_VALUES|Valores actuales
+#LABEL_MAX_30_DAYS|máx. 30 d&iacute;as
+#LABEL_DAILY_VALUES|Valores del d&iacute;a
+#LABEL_ALL_INV_INDIVID|Cada inversor
+#LABEL_ALL_INV_SUM|Suma inversores
+
+// Dialog: Störung / Failure
+#TITEL_FAILURE|Aviso en caso de errores
+#LABEL_LIST_STATUS|Lista de todos los c&oacute;digos de estatus:
+#LABEL_LIST_ERROR|Lista de todos los c&oacute;digos de errores
+#LABEL_NUMBER|Nro.
+#LABEL_ACTIVE|Activo
+#LABEL_ERROR|Error
+#LABEL_FROM|De
+#LABEL_CODE|C&oacute;digo
+#LABEL_UNTIL|Hasta
+#LABEL_AFTER_N|despu&eacute;s de
+#LABEL_ACTIVATE_MEASURE|Activar mediciones
+#LABEL_MAX_EACH_DAY|M&aacute;x. cantidad por d&iacute;a
+
+// Dialog: Backup
+#TITEL_BACKUP|Copia de seguridad autom&aacute;tico/manual
+#LABEL_CONFIRM_BACKUP|Cargar copia de seguridad?
+#LABEL_CONFIRM_IMPORT|Iniciar importaci&oacute;n de datos? (Todos los datos existentes ser&aacute;n borrados)
+#LABEL_CONFIRM_SAVE_BACKUP|Realizar copia de seguridad?
+#LABEL_BACKUP|Copia de seguridad
+#LABEL_AUTOMATICALLY|Autom&aacute;tico
+#LABEL_BACKUP_INTERVAL|Intervalo de copia de seguridad
+#LABEL_DAILY2|Diario
+#LABEL_WEEKLY|Semanal
+#LABEL_MANUALLY|Manual
+#LABEL_SAVE_DATA_HD|Guardar datos en el disco duro
+#LABEL_CREATE|Crear
+#LABEL_LOAD_DATA_HD|Cargar datos del disco duro
+#LABEL_LOAD|Cargar
+#LABEL_DATA_CORRECTION|Correcci&oacute;n de datos
+#LABEL_DAILY_YIELD|Valor del d&iacute;a
+#LABEL_FOR_EXAMPLE|Por ejemplo
+#LABEL_ADJUST|Corregir
+#LABEL_DATA_IMPORT|Importaci&oacute;n de datos
+#LABEL_INITAL_INVENTORY|Inventario inicial de datos diarios en formato CSV
+#LABEL_DATE_FORMAT|dd.mm.aaaa
+#LABEL_DAY_YIELD_IN|Rendimiento del d&iacute;a en
+
+// Dialog: System
+#TITEL_SYSTEM|Administrar configuraci&oacute;n del sistema
+#LABEL_CONFIRM_RESTORE_SYSTEM|Cargar configuraci&oacute;n del sistema?
+#LABEL_CONFIRM_RESET_SYSTEM|Reestablecer configuraci&oacute;n del sistema?
+#LABEL_SYSTEM_BACKUP|Sistema de copia de seguridad
+#LABEL_SAVE_SYSTEM_DATA_HD|Guardar configuraci&oacute;n del sistema en el disco duro
+#LABEL_RESTORE_SYSTEM_SETTINGS|Cargar configuraci&oacute;n del sistema del disco duro
+#LABEL_SYSTEM_SETTINGS|Configuraci&oacute;n del sistema
+#LABEL_CURRENT_SERIAL|Nro.de serie actual
+#LABEL_LICENCE_KEY|Licencia Nro.
+#LABEL_SAVE_INTERVAL|Intervalo de memoria
+#LABEL_MINUTE_SHORT2|min
+#LABEL_TIMEZONE|Zona horaria GMT
+#LABEL_CENTRAL_EUROPE|Europa central+1
+#LABEL_DATE_TIME|Hora
+#LABEL_NEW|Nuevo
+
+// Dialog: Update
+#TITEL_UPDATE_FIRMWARE|Actualizar Firmware
+#LABEL_CONFIRM_FIRM_UPD1|Firmware-Update - cuestion de seguridad\n\Realiz&oacute; una copia de seguridad?
+#LABEL_CONFIRM_FIRM_UPD2|Acaba de hacer una copia de seguridad?
+#LABEL_CONFIRM_FIRM_UPD3|Desea ejecutar la acutalizaci&oacute;n?
+#LABEL_UPDATE_FIRMWARE|Actualizar el Firmware
+#LABEL_DO_DATA_BACKUP0|Atenci&oacute;n!
+#LABEL_DO_DATA_BACKUP1|Es indispensable realizar una copia de seguridad
+#LABEL_DO_DATA_BACKUP2|antes
+#LABEL_DO_DATA_BACKUP3|de ejecutar el Firmware!
+#LABEL_UPDATE_INFO1| La informaci&oacute;n actual sobre la versi&oacute;n de software para el
+#LABEL_UPDATE_INFO2|puede descargarse de
+#LABEL_UPDATE_INFO3|.
+#LABEL_UPDATE_INFO4|Guardar el archivo en el disco duro y buscarlo con el bot&oacute;n navegar.
+#LABEL_UPDATE_INFO5|La actualizaci&oacute;n es realizada cuando presione el bot&oacute;n `ejecutar´. Durante la ejecuci&oacute;n no se debe interrumpir el proceso.
+#LABEL_CURRENT_FIRMWARE|Version aktual del Firmware
+#LABEL_FIRMWARE_DATE_FROM|del
+#LABEL_LOAD2|Ejecutar
+
+// Email / SMS / FTP
+#LABEL_SERVER_DOMAIN|solarlog-home.eu
+#LABEL_SERVER_USERNAME|Usuario
+#LABEL_SERVER_PASSWORD|Clave
+#LABEL_SERVER_EMAIL1|usuario@solarlog-home.eu
+#LABEL_SERVER_OWN_EMAIL|dirección eléctronica propia
+#LABEL_SERVER_SMS_SAMPLE|SMS0173...
+
+// Login
+#TITEL_LOGIN|Entrada al sitio de configuraci&oacute;n
+#LABEL_LOGIN|Entrada
+
+// System 2
+#LABEL_ADDITIONAL_PW|Control de clave adicional?
+#LABEL_OLD_PW|Clave vieja
+#LABEL_NEW_PW|Clave nueva
+#LABEL_REPEAT_PW|Repetir clave
+
+// ************ 19.02.2009 NEU
+// Dialog: System
+#LABEL_CHOOSE_LANG|Selec. idioma
+
+// Dialog: Anfangskonfiguration
+#LABEL_BEGIN_TITEL|Configuraci&oacute;n inicial
+#MENU_START|Inicio
+#MENU_BEGIN|Config. inicial
+#LABEL_CHOOSE_INV_B|Inversor en RS485/422-B
+#LABEL_PLEASE_CHOOSE|Seleccionar
+
+#LABEL_CONFIRM_RESET_FACTORY|Restablecer configuraci&oacute;n de f&aacute;brica
+#LABEL_RESET|Restablecer
+
+// Dialog: Mainmenu
+#LABEL_MORE_INFO|M&aacute;s informaci&oacute;n
+#LABEL_NUM_INV|N&uacute;mero de inversores
+#LABEL_PLANT_SIZE|Tama&ntilde;o de instalaci&oacute;n
+#LABEL_SERIALNUM|N&uacute;mero de serie
+
+// Dialog: WR Sortierung
+#LABEL_SORT_TITEL|Secuencia de inversores
+#LABEL_SORT_DESC1|Los inversores se pueden reordenar como se desee dentro
+#LABEL_SORT_DESC2|de la interfaz (mismo color).
+#LABEL_CURRENT|Actual
+#LABEL_SORT_POS|Pos.
+#MENU_SORT|Sec. inversores
+#LABEL_SORT_CONFIRM|¿Guardar nuevas posiciones de inversores?
+#LABEL_SORT_MISSING|No se han asignado todos los inversores.
+#LABEL_SORT_NOREORG|No modificar datos (p.ej. al cambiar inversor)
+#LABEL_SORT_REORG|Reorganizar datos en nuevas posiciones (p.ej. en ampliaciones). Puede tardar un tiempo seg&uacute;n el volumen de datos.
+#LABEL_SORT_INIT|Borrar todos datos (recomendado en primera config.)
+#LABEL_SORT_RESTARTMSG|Nota: Despu&eacute;s de guardar se reinicia el aparato.
+
+// Dialog: Einspeisemanagement
+#LABEL_PM_TITEL|Gestión energética
+#MENU_PM|Gest.energética
+#LABEL_PM_DESC1|Las entradas digitales y niveles de rendimiento se pueden
+#LABEL_PM_DESC2|configurar según las exigencias de las empresas distribuidoras de energía.
+#LABEL_PM_RELAY|Relé
+// for Translater: "K1" means "Kanal1"
+#LABEL_PM_C1|K1
+#LABEL_PM_C2|K2
+#LABEL_PM_C3|K3
+#LABEL_PM_C4|K4
+#LABEL_PM_POWER|Rendimiento en %<br>(máx. rendimiento nominal)
+#LABEL_PM_DIGI_IN|Entrada digital
+#LABEL_PM_DIGI_1|D_IN_1
+#LABEL_PM_DIGI_2|D_IN_2
+#LABEL_PM_DIGI_3|D_IN_3
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_STEP1|Nivel 1
+#LABEL_PM_STEP2|Nivel 2
+#LABEL_PM_STEP3|Nivel 3
+#LABEL_PM_STEP4|Nivel 4
+#LABEL_PM_RELAIS|Cerrar el relé en el nivel 4
+#LABEL_PM_MONITORING|Control y protocolización
+#LABEL_PM_INV|Regulación de los inversores
+#LABEL_PM_INV_NOTE|Nota: La función depende del inversor utilizado
+#LABEL_PM_RELAIS_CONF|Configuración de canal y rendimiento
+#LABEL_PM_PWR_CHG|Para evitar grandes saltos de rendimiento (p.ej., desconexión total en un tiempo mínimo), se puede configurar la máx. variación del rendimiento por intervalo. 1 intervalo son normalmente 15 s.
+#LABEL_PM_PWR_CHG_PROZ|Máx. variación de rendimiento
+#LABEL_PM_NETTING|Interconexión
+#LABEL_PM_NET_DESC1|La reducción del rendimiento se puede pasar a máx. otros 9
+// "... SolarLog ..."
+#LABEL_PM_NET_DESC2|en la red. Para ello, introducir la dirección IP. Se abren automáticamente otros campos de entrada.
+#LABEL_PM_IPADRESS|Dirección IP
+
+// Dialog: iSCB - "intelligent String Connection Box"
+#LABEL_CONFIG_SCB|Configurar iSCB
+#LABEL_CONFIG_SCB|Configurar SCB
+#LABEL_SCB_TITEL|iSCB
+#LABEL_SCB_TITEL|SCB
+#MENU_SCB|iSCB
+#MENU_SCB|SCB
+#LABEL_INGENERAL|Generalidades
+//#LABEL_INGENERAL|Caja de conexión de strings inteligente
+#LABEL_CHOOSE_TYP|Seleccionar tipo iSCB
+#LABEL_CHOOSE_TYP|Seleccionar tipo SCB
+#LABEL_ACT_AUTO_CALIBR|Calibración automática de desviación de entradas de corriente (de noche)
+// for Translater: "um" means "um 17 Uhr"
+#LABEL_AT|A las
+#LABEL_SCB_CONFIG|Configuración iSCB
+#LABEL_SCB_CONFIG|Configuración SCB
+#LABEL_CHOOSE|Seleccionar
+#LABEL_CONNECTED2|Conectado
+#LABEL_WORKING|En funcionamiento
+#LABEL_ADRESS2|Dirección
+#LABEL_QUANT_ANALOG|Nº entradas analógicas (1-24)
+#LABEL_QUANT_DIGITAL|Nº entradas digitales (1-8)
+#LABEL_DEDICATED_INV|Inversor asignado
+#LABEL_CHAN_CONFIG|Configuración canal
+#LABEL_ANALOG|Analógico
+#LABEL_TYPE|Tipo
+#LABEL_POWER|Corriente
+#LABEL_OFFSET|Desviación
+#LABEL_SLOPE|Pendiente
+#LABEL_DIGITAL|Digital
+#LABEL_ALARM|Alarma
+#LABEL_UNUSED|Sin utilizar
+#LABEL_UNASSIGNED|Sin ocupar
+
+// Dialog: Anfangskonfiguration - ab 5.12.09
+#LABEL_SMABT|Bluetooth SMA
+#LABEL_SMABT_SERIAL|Nº serie del inversor
+
+// ab 24.12.09
+#LABEL_CURRENCY|Cent
+
+// Dialog: SCB_SIAC - ab 18.01.10
+#LABEL_QUANT_STRINGS_SIAC|Número de strings (1-12)
+#LABEL_INTERFACE485|Interfaz RS485
+#LABEL_SIAC|SIAC
+#LABEL_STRING|String
+
+// Dialog: SCB Current Data
+#VISU_SCB|Monitor SCB
+#LABEL_SCB_NO_DATA|SCB inactivo o sin datos
+#LABEL_DUPLICATE|Duplicar
+
+// Dialog: PM  - ab 25.02.10
+#LABEL_PM_LOAD_MANAGE|Gestión de carga
+#LABEL_PM_LOAD_MAN_DESC|Reducción rend. con diferencias fase > 4,6 kW (sólo inv.monofásicos)
+#LABEL_PM_WHICH_PHASE|Suministro en fase
+#LABEL_PM_WHICH_PHASE2|(=0 para sumin. trifásico)
+
+// Dialog: SCB_SMAX - ab 10.03.10
+#LABEL_QUANT_STRINGS_SMAX|Número de strings (1-24)
+#LABEL_SMAX|SolarMax
+
+// Dialog: SCB_KNBX - ab 11.05.10
+#LABEL_QUANT_STRINGS_KNBX|Número strings (1-16)
+#LABEL_KNBX|Knubix
+
+// Email / FTP - Solar-Log WEB
+#LABEL_SERVER_FTP_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL1_CLASSIC2|nombreusuario@home.solarlog-web.eu
+#LABEL_SERVER_FTP_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL1_FULL|nombreusuario@solarlog-web.eu
+#LABEL_SERVER_FTP_SELF|propio-dominio.net
+#LABEL_SERVER_EMAIL_SELF|propio-servidor-smtp
+#LABEL_SERVER_EMAIL1_SELF|nombreusuario@servidor.smtp
+
+// Dialog: Internet - 06.07.10
+#LABEL_SOLARLOG_WEB|Solar-Log WEB
+#LABEL_WEB_FULL|Full Service
+#LABEL_WEB_CLASSIC2|Classic-2nd Edition
+#LABEL_WEB_SELF|Self Made
+#LABEL_WEB_CLASSIC1|Classic-1st Edition ('solarlog-home')
+
+// Dialog: Lan - 16.07.10
+#LABEL_SMS_DIRECT|SMS directamente por módem
+
+
+// Dialog: Einspeisemanagement - 20.07.10
+#LABEL_PM_REACTIVE_POWER_CONTROL|Control potencia reactiva
+#LABEL_PM_FIX_COS_PHI|Valor fijo cos(Phi)
+#LABEL_PM_FIX_REACTIVE_POWER|Potencia reactiva fija (Var)
+#LABEL_PM_LINE_COS_PHI|Valor variable cos(Phi) en curva
+#LABEL_PM_LINE_REACTIVE_POWER|Potencia reactiva variable en curva
+#LABEL_PM_CONTR_COS_PHI|Valor controlado cos(Phi) 
+#LABEL_PM_VAR|Var
+#LABEL_PM_COS_PHI|Cos(Phi)
+#LABEL_PM_FROM|Desde
+#LABEL_PM_TO|Hasta
+#LABEL_PM_REACTIVE_POWER|Potencia reactiva
+#LABEL_PM_ACTIVE_POWER|Potencia activa
+#LABEL_PM_P_PN|P/Pn
+#LABEL_PM_UNDER_EXCITED|inductivo
+#LABEL_PM_STEP|Nivel
+#LABEL_PM_EXAMPLE_COS_LINE1|Ejemplo anterior:
+#LABEL_PM_EXAMPLE_COS_LINE2|Desde P/Pn 0,20    Cos(Phi) 0,95 
+#LABEL_PM_EXAMPLE_COS_LINE3|Hasta P/Pn 0,80    Cos(Phi) 0,95   inductivo
+#LABEL_PM_EXAMPLE_RAP_LINE1|Ejemplo anterior:
+#LABEL_PM_EXAMPLE_RAP_LINE2|Desde potencia activa 2500 W pot.reactiva 0 Var 
+#LABEL_PM_EXAMPLE_RAP_LINE3|Hasta potencia activa 5000 W pot.reactiva 1400 Var
+
+// Dialog: Wechselrichter - 02.08.10
+#LABEL_ACCESS_KEY|Clave de Acceso
+#LABEL_ACCESS_KEY_I|Clave de Acceso CI
+#LABEL_ACCESS_KEY_II|Clave de Acceso CII
+#LABEL_ACCESS_KEY_III|Clave de Acceso CIII
+#LABEL_ACCESS_KEY_CUR|Clave de Acceso general
+#LABEL_DIGITAL_COUNTER_AVAIL|Contador de energía de entrada S0
+#LABEL_ENERGY_METER_INV|Modo - inversor
+#LABEL_ENERGY_METER_YIELD|Contador general
+#LABEL_ENERGY_METER_USAGE|Contador de consumo
+#LABEL_MODULFIELD|Grupo de paneles (1-9)
+#LABEL_IMPULSFACTOR|Factor del impulso
+#LABEL_MPP1|Seguidor MPP 1
+#LABEL_MPP2|Seguidor MPP 2
+#LABEL_MPP3|Seguidor MPP 3
+
+// Dialog: System - 07.10.10
+#LABEL_CHOOSE_COUNTRY|Seleccionar país
+#LABEL_COUNTRY_LOAD|Activar
+#LABEL_DST_SETTING|Horario de verano
+
+// Dialog: Wechselrichter - 11.10.10
+#LABEL_METER_ADDR_FEEDIN|Dirección contador electr./export.
+#LABEL_METER_ADDR_PRODUCE|Dirección contador prod.
+
+// Dialog: Anfangskonfiguration - 30.11.10
+#LABEL_CHOOSE_INV_E|Inversores en red (Ethernet)
+
+// Dialog: Powermanagement - 10.12.10
+#LABEL_HARDWARE_UPDATE|(Actualiz. hardware necesaria )
+
+// Dialog: Wechselrichtertausch - 08.01.11
+#LABEL_EXCHANGE_TITEL|Cambio inversores
+#LABEL_EXCHANGE_DESC1|Inversores se pueden intercambiar dentro área interfaz
+#LABEL_EXCHANGE_DESC2|(mismo color).
+#MENU_EXCHANGE|Cambio inversor
+#LABEL_EXCHANGE_SCANNING|Iniciar nueva identif. inversor
+#LABEL_EXCHANGE_NO_MANUAL|Función sólo disp.si direcciones no se pueden config.en inversor
+
+// Dialog: SCB-Knubix - 18.02.11
+#LABEL_SENSORBOX|Sensorbox
+#LABEL_SENSOR_OUTSIDE_TEMP|Sensor temperatura exterior conectado
+#LABEL_SENSOR_WIND|Sensor viento conectado
+
+// Dialog: WLAN-Konfiguration - 08.01.11
+#LABEL_WLAN_TITEL|WiFi
+#LABEL_WLAN_SELECT|Seleccionar red
+#LABEL_WLAN_SECURITY|Config.seguridad
+#LABEL_WLAN_IPSETTINGS|Config. IP
+#LABEL_WLAN_KEY|Clave de red
+#MENU_WLAN|WiFi
+#LABEL_WLAN_SCANNING|Buscar redes inalámbr.
+#LABEL_WLAN_AUTOMATIC|Determinar automát.
+#LABEL_WLAN_NAME|Nombre de red (SSID)
+#LABEL_WLAN_ENCRYPTION|Codificación
+#LABEL_WLAN_CONNECTED|Conectado
+#LABEL_WLAN_DISCONNECTED|Desconectado
+#LABEL_WLAN_DISABLED|Desactivado
+#LABEL_WLAN_SLERROR|SL offline
+#LABEL_WLAN_INITIALIZING|Inicializar
+
+
+// Dialog: Mainmenu - 12.04.11
+#LABEL_NUM_METER|Cont. digitales
+#LABEL_NUM_SENSOR|Sensores

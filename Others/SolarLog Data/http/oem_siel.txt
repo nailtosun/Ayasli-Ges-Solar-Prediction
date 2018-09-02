@@ -1,0 +1,20 @@
+// OEM specific bundle for internal cgi-bases web pages
+// Firmware: V2.3.0-30
+// Date    : 19.10.2010
+// Language: deutsch
+// OEM     : Siel GmbH
+
+#COMPANY|&nbsp;&nbsp;&nbsp;&copy;&copy; 2010 SIEL Spa &nbsp;
+#COMPANY_EMAIL|info@sielups.com
+#COMPANY_LOGO|solarlog.jpg
+#COMPANY_WEB|www.sielups.com
+#COMPANY_FIRMWARE|www.solar-log.com/service-support/downloads/firmware.html
+#LOGGER_NAME|Soleil-Log
+#LOGGER_NAME2|Solar Monitoring System
+#LOGGER_NAME3|(c) 2010 SIEL Spa
+#LOGGER_FORMAT|Soleil-Log
+#LOGGER_FORMAT2|
+#BASIC_WEB_SETTINGS|Grundeinstellungen 'www.sielups.com'
+#LOGGER_FILENAME|soleillog
+#DOGM_BOOT1|Soleil-Log
+#DOGM_BOOT2|2010 SIEL

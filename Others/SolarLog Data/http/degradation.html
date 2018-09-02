@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>%#LABEL_DEGRAD_TITEL#</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="showsubm.js"></script>
+<script language="JavaScript" src="base_vars.js"></script>
+<script language="JavaScript">
+if( SCB==true ) {
+   // reload config for SCB if active
+  var sc=new Array(), isc=0
+  document.write("<script language='JavaScript' src='scb_vars.js?cur=1'><\/script>")
+}
+
+var da = new Array();
+var dx = 0;
+var DATUM=0, ETOTAL=1;
+function getToken( d, wrI, token ) {
+    var pnt1, pnt2;
+    pnt1 = 0;
+    pnt2 = d.indexOf(token);
+    while( wrI>0 ) {
+        pnt1 = pnt2+1;
+        pnt2 = d.indexOf(token,pnt1);
+        wrI--;
+        if( pnt2 <= 0 )
+            break;
+    }
+    if( wrI>0 )
+        return "";
+    if( pnt2<=0 )
+        return d.substr(pnt1);
+    return d.substr(pnt1,pnt2-pnt1);
+}
+function getWRToken( d, wrI ) {
+    return getToken( d, wrI, "|" )
+}
+function enumData( d, wrI ) {
+    var data=new Array()
+    var pnt1, pnt2, s=0
+    data[0] = getWRToken( d, 0 );
+    d = getWRToken( d, wrI );
+    pnt1=0;
+    while( true ) {
+        pnt2 = d.indexOf(";",pnt1)
+        if( pnt2 <= 0 ) {
+            data[1+s] = parseInt( d.substr(pnt1),10 );
+            break;
+        }
+        data[1+s] = parseInt( d.substr(pnt1, pnt2-pnt1),10 )
+        pnt1 = pnt2+1;
+        s++;
+    }
+    return data
+}
+function getETotal( d ) {
+    var eTotal, wrI, data;
+    eTotal = 0;
+    for( wrI=0; wrI<AnzahlWR; wrI++ ) {
+        if( WRInfo[wrI][11]==1 || (WRInfo[wrI][11]==2 && WRInfo[wrI][14]>0) )
+            continue
+        data = enumData( d, wrI+1 );
+        eTotal += data[1];
+    }
+    return eTotal;
+}
+function getMinMaxYear() {
+    var i=0, dt, jahr;
+    var minMax = new Array(2);
+    minMax[0]=9999;
+    minMax[1]=0;
+    for(i=0 ;i<dx; i++ ) {
+        dt=getWRToken( da[i], 0 );
+        jahr=2000+parseInt( dt.substr(6,8),10 );
+        if( jahr<minMax[0] )
+            minMax[0]=jahr;
+        if( jahr>minMax[1] )
+            minMax[1]=jahr;
+    }
+    return minMax;
+}
+function sortETotal( a, b) {
+    if( a[ETOTAL] < b[ETOTAL] )
+        return 1;
+    else
+        return -1;
+}
+function extractYear( targetYear ) {
+    var i, i2=0;
+    var oneYear = new Array();
+    for(i=0 ;i<dx; i++ ) {
+        dt=getWRToken( da[i], 0 );
+        year=2000+parseInt( dt.substr(6,8),10 );
+        if( year==targetYear ) {
+            oneYear[i2] = new Array(2);
+            oneYear[i2][DATUM] = dt;
+            oneYear[i2][ETOTAL] = getETotal( da[i] );
+            i2++;
+        }
+    }
+    return oneYear;
+}
+function top20( wWert ) {
+    var min = 9
+    var max = 24
+    var max_spreiz = 10.0
+    var spreiz_min=2
+    var i,i2
+    var topMax, topMin
+    var spreizung = new Array(max)
+    var topfN = new Array(max)
+    var topfM = new Array(max)
+    var mittel, anzahl
+    var maxTopf, maxIndex
+    var oben, unten
+    var tagMax
+
+
+    topMax = wWert[min][ETOTAL]
+    topMin = wWert[max-1][ETOTAL]
+
+    // Spreizung berechnen
+    for( i=spreiz_min; i<max; i++ ) {
+        spreizung[i] = (wWert[i][ETOTAL]-wWert[max-1][ETOTAL])/(wWert[spreiz_min][ETOTAL]-wWert[max-1][ETOTAL])*100
+//document.write( i+". "+wWert[i][ETOTAL]+", "+wWert[i][DATUM]+", "+spreizung[i]+"<br>" )
+    }
+
+    for( i=min; i<max; i++ ) {
+        mittel=0
+        anzahl=0
+        // nach oben
+        i2=i-1
+        while( i2>min && spreizung[i2]<(spreizung[i]+max_spreiz)  ) {
+            mittel += wWert[i2][ETOTAL]
+            anzahl ++
+            i2--
+        }
+        // nach unten
+        i2=i
+        while( i2<max && spreizung[i2]>(spreizung[i]-max_spreiz)  ) {
+            mittel += wWert[i2][ETOTAL]
+            anzahl ++
+            i2++
+        }
+        topfN[i]=anzahl
+        topfM[i]=mittel/anzahl
+//document.write( i+". "+anzahl+", "+mittel+", "+topfM[i]+", "+wWert[i][DATUM]+"<br>" )
+    }
+
+    maxTopf=-1
+    for( i=min; i<max; i++ ) {
+        if( topfN[i]>maxTopf ) {
+            maxTopf=topfN[i]
+            maxIndex=i
+        }
+    }
+//document.write( "MaxTopf="+maxTopf+", maxIndex="+maxIndex+", "+"<br>" )
+    oben=maxIndex
+    unten=maxIndex
+    // nach oben
+    while( oben-1>min && topfN[oben-1]>=(maxTopf-1) ) {
+        oben--
+    }
+    // nach unten
+    while( unten+1<max && topfN[unten+1]>=(maxTopf-1) ) {
+        unten++
+    }
+//document.write( "Topf oben="+oben+", Topf unten="+unten+"<br>" )
+    mittel=0
+    anzahl=0
+    for( i=min; i<max; i++ ) {
+        if( i>=oben && i<=unten ) {
+            mittel += wWert[i][ETOTAL]
+//            mittel += topfM[i]
+            anzahl++
+        }
+    }
+    tagMax = mittel/anzahl
+//document.write( "Durchschnittlicher Tagesmax="+tagMax+"<br>" )
+
+    // Tabelle aufbauen
+    document.write("<table width='540' border='0' cellspacing='0' cellpadding='0' class='std_table'>");
+    document.write("<tr>");
+    document.write("<td align='center'><strong>%#LABEL_TOP#<br>&nbsp;</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_MAXVAL#<br>Wh</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_DATE#<br>&nbsp;</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_SPREIZUNG#<br>%</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_BENCHMARK#<sup>*</sup><br>&nbsp;</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_HIT#<br>&nbsp;</strong></td>");
+    document.write("<td align='center'><strong>%#LABEL_AVRG_MAX#<br>Wh</strong></td>");
+    document.write("</tr>");
+    //
+    for( i=0; i<max+3; i++ ) {
+        document.write("<tr>")
+        document.write("<td align='center'>"+(i+1)+"</td>");
+        document.write("<td align='center'>"+wWert[i][ETOTAL]+"</td>");
+        document.write("<td align='center'>"+wWert[i][DATUM]+"</td>");
+        if( spreizung[i]!=null )
+            document.write("<td align='center'>"+Math.floor(spreizung[i]*10)/10+"</td>");
+        else
+            document.write("<td align='center'>&nbsp;</td>");
+        if( topfN[i]!=null )
+            document.write("<td align='center'>"+topfN[i]+"</td>");
+        else
+            document.write("<td align='center'>&nbsp;</td>");
+        if( oben <= i && i <= unten )
+            document.write("<td align='center'>&larr;</td>");
+        else
+            document.write("<td align='center'>&nbsp;</td>");
+        if( i==maxIndex )
+            document.write("<td align='center'>"+Math.floor(tagMax)+"</td>");
+        else
+            document.write("<td align='center'>&nbsp;</td>");
+    }
+    //
+    document.write("</tr>");
+		document.write("</table>");
+    return tagMax
+
+}
+</script>
+<script language="JavaScript" src="days_hist.js"></script>
+<script language="JavaScript">document.write("<script language='JavaScript' src='lang_"+Lang+".js'><\/script>")</script>
+<script language="JavaScript">document.write("<script language='JavaScript' src='oem_"+OEMTyp+(SLTyp==800?"":"_"+SLTyp)+".js'><\/script>")</script>
+</head>
+<body>
+<div id="rap">
+	<div id="inhalt">
+		<div id="head">
+			<div id="logo"><img src="%#COMPANY_LOGO#"></div>
+			<div id="headright">
+				<table cellpadding="0" cellspacing="0" border="0" class="menu">
+					<tr>
+						<td align="center" valign="middle" class="in-act"><a href="index.html">%#MENU_YIELD_DATA#</a></td>
+						<td align="center" valign="middle" class="act"><a href="events.html">%#MENU_DIAGNOSIS#</a></td>
+                        <script language="JavaScript" src="menu.js"></script>
+                        <script language="JavaScript">
+                            showMainMenuConfig(false, "%#MENU_CONFIGURATION#" )
+                        </script>
+						<td height="30" align="center" valign="middle" class="in-act">&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+			<div style="clear: left;"></div>
+		</div>
+		<div id="contentleft">
+			<ul class="submenu">
+				<li><a href="events.html">%#LABEL_EVENTPROT#</a></li>
+				<li><a href="degradation.html">%#LABEL_DEGRADATION#</a></li>
+        <script language="JavaScript">
+        if( SCB==true ) {
+           if (SCBIF == 2)
+             document.write("<li><a href=\"events_scb.html\">%#LABEL_EVENTPROT# SCB</a></li>")
+        }
+        </script>
+			</ul>
+		</div>
+		<div id="contentright">
+			<h1>%#LABEL_DEGRADATION#</h1>
+			<h2>%#LABEL_DEGRAD_INFO1#</h2>
+			%#LABEL_DEGRAD_INFO2#
+			%#LABEL_DEGRAD_INFO3#
+			%#LABEL_DEGRAD_INFO4#
+			%#LABEL_DEGRAD_INFO5#
+			%#LABEL_DEGRAD_INFO6#
+			%#LABEL_DEGRAD_INFO7#
+			<br /><br />
+			<script language="JavaScript">
+			var jahre;
+			var minMax = getMinMaxYear();
+			var maxTag = new Array(minMax[1]-minMax[0]+1);
+			
+			document.write("<p style='font-weight: bold;'>");
+			if( minMax[0]==minMax[1] )
+					document.write("%#LABEL_ANALYSIS_1YEAR# "+minMax[0]+"<br>");
+			 else
+					document.write("%#LABEL_ANALYSIS_XYEARS# "+minMax[0]+" %#LABEL_UNTIL# "+minMax[1]+"<br>");
+			document.write("</p>");
+			
+			for( jahre=minMax[0]; jahre<=minMax[1]; jahre++ ) {
+					if( minMax[0]!=minMax[1] )
+							document.write("<br>%#LABEL_YEAR# "+jahre+"<br>");
+					oneYear = extractYear( jahre );
+					if( oneYear.length < 60 )
+							document.write("(%#LABEL_NOT_ENOUGH_DATA#)<br>");
+					else {
+							oneYear.sort( sortETotal );
+							maxTag[jahre-minMax[0]] = top20( oneYear );
+					}
+			}
+			</script>
+			<br />
+			%#LABEL_BENCHMARK#<sup>*</sup>: %#LABEL_DEGRAD_INFO1B#
+			%#LABEL_DEGRAD_INFO2B#
+			<br /><br /><br />
+			<h2>%#LABEL_DEGRAD_TAB#</h2>
+			<script language="JavaScript">
+					var y, max=0;
+					for(jahre=minMax[0]; jahre<=minMax[1]; jahre++ ) {
+							if( maxTag[jahre-minMax[0]] == null ) {
+									maxTag[jahre-minMax[0]] = 0;
+							}
+							if( maxTag[jahre-minMax[0]]>max )
+									max = maxTag[jahre-minMax[0]];
+					}
+					document.write("<table width='540' border='0' cellspacing='0' cellpadding='0' class='std_table'>");
+					for( y=1; y<=3; y++ ) {
+							if( y==1 ) {
+									document.write("<tr>");
+									document.write("<td align='center'><strong>&nbsp;</strong></td>");
+									for(jahre=minMax[0]; jahre<=minMax[1]; jahre++ ) {
+											document.write("<td align='center'><strong>"+jahre+"</strong></td>");
+									}
+									document.write("</tr>");
+							}
+							else if( y==2 ) {
+									document.write("<tr>")
+									document.write("<td align='center'>%#LABEL_AVRG_DAYMAX#</td>");
+									for(jahre=minMax[0]; jahre<=minMax[1]; jahre++ ) {
+											document.write("<td align='center'>"+Math.floor(maxTag[jahre-minMax[0]])+" Wh</td>");
+									}
+									document.write("</tr>");
+							}
+							else if( y==3 ) {
+									document.write("<tr>")
+									document.write("<td align='center'>%#LABEL_DECREASE#</td>");
+									for(jahre=minMax[0]; jahre<=minMax[1]; jahre++ ) {
+											abnahme = Math.floor( (maxTag[jahre-minMax[0]]*100/max-100) *10)/10;
+											if( abnahme < -99 )
+													document.write("<td align='center'>&nbsp;</td>");
+											else
+													document.write("<td align='center'>"+abnahme+" %</td>");
+									}
+									document.write("</tr>");
+							}
+					}
+					//
+					document.write("</table>");
+			</script>
+		</div>
+		<div style="clear: left;"></div>
+	</div>
+	<div id="footer">
+		%#COMPANY# | <a href="mailto:%#COMPANY_EMAIL#" onfocus="this.blur()">%#COMPANY_EMAIL#</a>
+	</div>
+</div>
+</body>
+</html>

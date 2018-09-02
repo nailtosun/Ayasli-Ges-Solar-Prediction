@@ -1,0 +1,20 @@
+// OEM specific bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 31.03.2008
+// Language: deutsch
+// OEM     : Oelmaier Technology
+
+#COMPANY|&nbsp;&nbsp;&nbsp;&copy; 2009 Oelmaier Technology GmbH &nbsp;
+#COMPANY_EMAIL|info@oelmaier-technology.de
+#COMPANY_LOGO|solarlog1000.jpg
+#COMPANY_WEB|www.oelmaier-technology.com
+#COMPANY_FIRMWARE|www.oelmaier-technology.com
+#LOGGER_NAME|LogPAC100touch
+#LOGGER_NAME2|Solar Monitoring System
+#LOGGER_NAME3|(c) 2009 Oelmaier Technology GmbH
+#LOGGER_FORMAT|LogPAC
+#LOGGER_FORMAT2|100touch 
+#BASIC_WEB_SETTINGS|Grundeinstellungen 'www.oelmaier-technology.com'
+#LOGGER_FILENAME|logpac
+#DOGM_BOOT1|logPac1000
+#DOGM_BOOT2|2009 Oelmaier

@@ -1,0 +1,19 @@
+// OEM specific bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 31.03.2008
+// Language: deutsch
+
+#COMPANY|&nbsp;&nbsp;&nbsp;&copy; 2009 ANTARIS Solar GmbH & Co.KG &nbsp;
+#COMPANY_EMAIL|info@antaris-solar.de
+#COMPANY_LOGO|solarlog1000.jpg
+#COMPANY_WEB|www.antaris-solar.de
+#COMPANY_FIRMWARE|www.solar-log.com/service-support/downloads/firmware.html
+#LOGGER_NAME|SolarLog1000
+#LOGGER_NAME2|Solar Monitoring System
+#LOGGER_NAME3|(c) 2009 ANTARIS Solar GmbH & Co.KG
+#LOGGER_FORMAT|SolarLog
+#LOGGER_FORMAT2|1000
+#BASIC_WEB_SETTINGS|Grundeinstellungen 'www.antaris-solar.de'
+#LOGGER_FILENAME|solarlog
+#DOGM_BOOT1|SolarLog
+#DOGM_BOOT2|2009 Antaris

@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta name="author" content="j.karwath">
+<meta name="editor" content="html-editor phase 5">
+<meta http-equiv="refresh" content="16">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+  var sc=new Array(), isc=0
+</script>
+<script language="JavaScript" src="pc.js"></script>
+<script language="JavaScript" src="functions.js"></script>
+<script language="JavaScript" src="scb_vars.js?cur=1"></script>
+<script language="JavaScript">document.write("<script language='JavaScript' src='lang_"+Lang+".js'><\/script>")</script>
+<script language="JavaScript">document.write("<script language='JavaScript' src='oem_"+OEMTyp+(SLTyp==800?"":"_"+SLTyp)+".js'><\/script>")</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#FF0000" alink="#FF0000" vlink="#FF0000">
+<script language="JavaScript">
+var i, i2, max, data, cnt
+// Siac-Pic
+if( SCBIF==2 ) { // SIAC
+  document.write("<div style='position: absolute; left:700px; top: 15px;'><img src='siac-scb.jpg' border='0'></div>")
+}
+data = enumData( sc[0], 1 )
+document.write( "<h2>"+getText(LBL_SCB)+" "+getText(LBL_CURRENT_DATA)+" - "+(data[0])+"</h2>" )
+  cnt=0
+  for( i=0; i<SCBInfo.length; i++ ) {
+    if( SCBInfo[i][0]==1 ) {
+      if( SCBIF==1 ) {  // Bonfiglioli
+        document.write( "<br><b>SCB "+(i+1)+" - \""+SCBInfo[i][7]+"\"</b><br>" )
+        document.write( "<table  border='1' cellpadding='0' cellspacing='0'>" )
+        // header
+        document.write( "<tr>" )
+        document.write( "<td width='150'></td>" )
+        max = (SCBInfo[i][3]>SCBInfo[i][4]?SCBInfo[i][3]:SCBInfo[i][4])
+        for( i2=0; i2<max; i2++ ) {
+          document.write( "<td width='40'>"+(i2+1)+"</td>" )
+        }
+        document.write( "</tr>" )
+        // analog
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_ANALOG)+" [A]</td>" )
+        data = enumDataFloat( sc[0], cnt+1 )
+        for( i2=0; i2<data[2]; i2++ ) {
+          document.write( "<td>"+(data[4+i2])+"</td>" )
+        }
+        for( ; i2<max; i2++ ) {
+          document.write( "<td>&nbsp;</td>" )
+        }
+        document.write( "</tr>" )
+        // digital
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_DIGITAL)+"</td>" )
+        for( i2=0; i2<data[3]; i2++ ) {
+          document.write( "<td>"+(data[4+data[2]+i2])+"</td>" )
+        }
+        for( ; i2<max; i2++ ) {
+          document.write( "<td>&nbsp;</td>" )
+        }
+        document.write( "</tr>" )
+        document.write( "</table>" )
+      }
+      else if( SCBIF==2 ) { // SIAC
+        document.write( "<br><b>SCB "+(i+1)+" - \""+SCBInfo[i][7]+"\"</b><br>" )
+        //
+        document.write( "<table border='1' cellpadding='0' cellspacing='0'>" )
+        document.write( "<tr>" )
+        data = enumDataFloat( sc[0], cnt+1 )
+        document.write( "<td width='150'>"+getText(LBL_ANALOG)+"</td>" )
+        document.write( "<td width='50'>"+(data[4+0])+" V</td>" )
+        document.write( "<td width='50'>"+(data[4+1])+" A</td>" )
+        document.write( "<td width='60'>"+( Math.round(data[4+2])/10 )+" kW</td>" )
+        document.write( "</tr>" )
+        // Status Varistor/Isolation
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_STATUS)+" "+getText(LBL_VARISTOR)+"</td>" )
+        document.write( "<td>"+(data[4+data[2]+0]==0?"Off":"On")+"</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "</tr>" )
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_STATUS)+" "+getText(LBL_ISOLATION)+"</td>" )
+        document.write( "<td>"+(data[4+data[2]+1]==0?"Off":"On")+"</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "</tr>" )
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_STATUS)+" System"+"</td>" )
+        document.write( "<td>"+(data[4+data[2]+2]==0?"Off":"On")+"</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "</tr>" )
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_STATUS)+" Comm."+"</td>" )
+        document.write( "<td>"+(data[4+data[2]+3]==0?"Off":"On")+"</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "<td>&nbsp;</td>" )
+        document.write( "</tr>" )
+        document.write( "</table><br>" )
+        //
+        document.write( "<table border='1' cellpadding='0' cellspacing='0'>" )
+        // header
+        document.write( "<tr>" )
+        document.write( "<td width='150'>"+getText(LBL_STRING)+"</td>" )
+        max = 12
+        for( i2=0; i2<max; i2++ ) {
+          document.write( "<td width='30'>"+(i2+1)+"</td>" )
+        }
+        document.write( "</tr>" )
+        // digital
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_STATUS)+"</td>" )
+        for( i2=3; i2<3+12; i2++ ) {
+          v="-"
+          if( SCBInfo[i][8][i2][0]==1 ) {
+             v=data[4+i2]
+          }
+          document.write( "<td>"+(v)+"</td>" )
+        }
+        document.write( "</tr>" )
+        document.write( "</table>" )
+        document.write( getText(LBL_SCB_SIAC_LEGEND)+"<br>" )
+      }
+      else if( SCBIF==3 ) {  // SolarMax
+        document.write( "<br><b>SCB "+(i+1)+" - \""+SCBInfo[i][7]+"\"</b><br>" )
+        document.write( "<table  border='1' cellpadding='0' cellspacing='0'>" )
+        // header
+        document.write( "<tr>" )
+        document.write( "<td width='150'></td>" )
+        max = (SCBInfo[i][3]>SCBInfo[i][4]?SCBInfo[i][3]:SCBInfo[i][4])
+        for( i2=0; i2<max; i2++ ) {
+          document.write( "<td width='40'>"+(i2+1)+"</td>" )
+        }
+        document.write( "</tr>" )
+        // analog
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_ANALOG)+" [A]</td>" )
+        data = enumDataFloat( sc[0], cnt+1 )
+        for( i2=0; i2<data[2]; i2++ ) {
+          document.write( "<td>"+(data[4+i2])+"</td>" )
+        }
+        for( ; i2<max; i2++ ) {
+          document.write( "<td>&nbsp;</td>" )
+        }
+        document.write( "</tr>" )
+        // digital derzeit keine
+        document.write( "</table>" )
+      }
+      else if( SCBIF==4 ) {  // Knubix
+
+     			var sTempUnit=" [°C]";
+          if (ISOCode == "US") sTempUnit=" [°F]";
+
+        document.write( "<br><b>SCB "+(i+1)+" - \""+SCBInfo[i][7]+"\"</b><br>" )
+        // Tabelle mit Strings und Idc
+        document.write( "<table  border='1' cellpadding='0' cellspacing='0'>" )
+
+        document.write( "<tr>" )
+        document.write( "<td width='150'>"+getText(LBL_STRING)+"</td>" )
+        max = 16
+        for( i2=0; i2<max; i2++ ) {
+          document.write( "<td width='30'>"+(i2+1)+"</td>" )
+        }
+        document.write( "</tr>" )
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_ANALOG)+" [A]</td>" )
+        data = enumDataFloat( sc[0], cnt+1 )
+        for( i2=0; i2<max; i2++ ) {
+          v = "-"
+          if( SCBInfo[i][8][i2][0]==1 ) {
+             v=data[4+i2]
+             if( v==255 ) {
+                v="Offline"
+             }
+          }
+          document.write( "<td>"+(v)+"</td>" )
+        }
+
+        document.write( "</tr>" )
+        document.write( "</table>" )
+
+        document.write("<br>")
+        document.write( "<table  border='1' cellpadding='0' cellspacing='0'>" )
+        document.write( "<tr>" )
+        document.write( "<td width='150'>"+getText(LBL_SUM_IDC)+" [A]</td>" )
+        v = data[4+16];
+        if (v==255) v="-";
+        document.write( "<td width='30'>"+(v)+"</td>" )
+        document.write( "</tr>" )
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_SUM_UDC)+" [V]</td>" )
+        v = data[4+17];
+        if (v==32767) v="-";
+        document.write( "<td>"+(v)+"</td>" )
+        document.write( "</tr>" )
+
+        document.write( "<tr>" )
+        document.write( "<td>"+getText(LBL_TMP_INSIDE)+(sTempUnit)+"</td>" )
+        v = data[4+22];
+        if (v==32767) v="-";
+            else if (ISOCode == "US")
+	 				    v = v*9/5+32;
+        document.write( "<td>"+(v)+"</td>" )
+        document.write( "</tr>" )
+        document.write( "</table>" )
+
+        var testwert,meldelinie1, meldelinie2, meldelinie3,freigabe
+        analogwert=data[4+23]
+        if (analogwert == 0) 
+        {
+          meldelinie1="-";
+          meldelinie2="-";
+          meldelinie3="-";
+          freigabe="-";
+        }
+        else
+        {
+          meldelinie1 = analogwert& 7 // Diese Werte müssen aus dem 24.Analogkanal maskiert werden
+          meldelinie2 = (analogwert>>3)&7 
+          meldelinie3 = (analogwert>>6)&7
+          freigabe = (analogwert>>9)&7
+        }
+        
+        document.write("<br> "+ getText(LBL_STATES)+ "<br>")
+        document.write("<table border='1' cellpadding='0' cellspacing='0'>")
+        document.write("<tr>")
+        document.write("<td width='150'>"+getText(LBL_DOOR)+"</td>")
+        document.write("<td width='30'>"+(data[4+24])+"</td>")
+        document.write("</tr>")
+        document.write("<tr>")
+        document.write("<td>"+getText(LBL_OVERVOLTAGE)+"</td>")
+        document.write("<td>"+(data[4+25])+"</td>")
+        document.write("</tr>")
+        document.write("<tr>")
+        document.write("<td>"+getText(LBL_ALARM_LINE)+"1</td>")
+        document.write("<td>"+(meldelinie1)+"</td>")
+        document.write("</tr>")
+        document.write("<tr>")
+        document.write("<td>"+getText(LBL_ALARM_LINE)+"2</td>")
+        document.write("<td>"+(meldelinie2)+"</td>")
+        document.write("</tr>")
+        document.write("<tr>")
+        document.write("<td>"+getText(LBL_ALARM_LINE)+"3</td>")
+        document.write("<td>"+(meldelinie3)+"</td>")
+        document.write("</tr>")
+        document.write("<tr>")
+        document.write("<td>"+getText(LBL_RELEASE)+"</td>")
+        document.write("<td>"+(freigabe)+"</td>")
+        document.write("</tr>")
+        document.write("</table>")
+        document.write(getText(LBL_ALARM_LINE)+": "+getText(LBL_SCB_KNB_LEGEND1));
+        document.write("<br>")
+        document.write(getText(LBL_RELEASE)+": "+getText(LBL_SCB_KNB_LEGEND2));
+
+        if (SCBInfo[i][9]>=1)
+        {
+
+          document.write("<br>")
+          document.write( "<br>"+getText(LBL_SENSOR_ON_KNB)+"<br>" )
+          document.write( "<table  border='1' cellpadding='0' cellspacing='0'>" )
+          document.write( "<tr>" )
+          document.write( "<td width='150'>"+getText(LBL_TMP_INSIDE)+(sTempUnit)+"</td>" )
+          v = data[4+18];
+          if (v==32767) v="-";
+          else if (ISOCode == "US")
+					   v = v*9/5+32;
+          document.write( "<td width='30'>"+(v)+"</td>" )
+          document.write( "</tr>" )
+          if (SCBInfo[i][9]&2)
+          {
+            document.write( "<tr>" )
+            document.write( "<td>"+getText(LBL_AMBTEMP2)+(sTempUnit)+"</td>" )
+            v = data[4+19];
+            if (v==32767) v="-";
+            else if (ISOCode == "US")
+					    v = v*9/5+32;
+            document.write( "<td>"+(v)+"</td>" )
+            document.write( "</tr>" )
+          }
+          document.write( "<tr>" )
+          document.write( "<td>"+getText(LBL_IRRADIATION)+" [W/m²]</td>" )
+          v = data[4+20];
+          if (v==32767) v="-";
+          document.write( "<td>"+(v)+"</td>" )
+          document.write( "</tr>" )
+          if (SCBInfo[i][9]&4)
+          {
+            document.write( "<tr>" )
+            document.write( "<td>"+getText(LBL_WIND2)+" [m/s]</td>" )
+            v = data[4+21];
+            if (v==32767) v="-";
+            document.write( "<td>"+(v)+"</td>" )
+            document.write( "</tr>" )
+          }
+          document.write( "</table>" )
+        }
+      }
+      cnt++
+    }
+  }
+
+function enumDataFloat( d, wrI ) {
+    var data=new Array();
+    var pnt1, pnt2, s=0;
+    data[0] = getWRToken( d, 0 );
+    d = getWRToken( d, wrI );
+    pnt1=0;
+    while( true ) {
+        pnt2 = d.indexOf(";",pnt1);
+        if( pnt2 <= 0 ) {
+            data[1+s] = parseFloat( d.substr(pnt1) );
+            break;
+        }
+        data[1+s] = parseFloat( d.substr(pnt1, pnt2-pnt1) );
+        pnt1 = pnt2+1;
+        s++;
+    }
+    return data;
+}
+</script>
+
+
+</body>
+</html>

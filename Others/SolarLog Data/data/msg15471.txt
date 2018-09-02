@@ -1,0 +1,3 @@
+Solar-Log - malfunction notice from yield monitoring of 24.01.17 - 12:35:00
+Module field 1 - INV3 'Namenlos'
+   String 2:  Ptarget =   615 W ( INV6 'Namenlos'/1 ), Pactual =   545 W, Diff =  12%

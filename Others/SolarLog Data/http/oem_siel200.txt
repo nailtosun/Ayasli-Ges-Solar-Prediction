@@ -1,0 +1,19 @@
+// OEM specific bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 31.03.2008
+// Language: deutsch
+
+#COMPANY|&nbsp;&nbsp;&nbsp;&copy; 2010 SIEL Spa  &nbsp;
+#COMPANY_EMAIL|info@sielups.com
+#COMPANY_LOGO|solarlog200.jpg
+#COMPANY_WEB|www.sielups.com
+#COMPANY_FIRMWARE|www.solar-log.com/service-support/downloads/firmware.html
+#LOGGER_NAME|Soleil-Log200
+#LOGGER_NAME2|Solar Monitoring System
+#LOGGER_NAME3|(c) 2010 SIEL Spa
+#LOGGER_FORMAT|Soleil-Log
+#LOGGER_FORMAT2|200
+#BASIC_WEB_SETTINGS|Grundeinstellungen 'www.sielups.com'
+#LOGGER_FILENAME|soleillog
+#DOGM_BOOT1|SoleilLog200
+#DOGM_BOOT2|2010 SIEL

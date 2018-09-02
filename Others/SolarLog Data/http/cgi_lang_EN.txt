@@ -1,0 +1,672 @@
+// language bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 25.04.2008
+// Language: ENGLISH
+//
+// Anmerkungen:
+// 1. Die Übersetzung sollte möglichst weniger oder gleich viel Zeichen belegen als der Originaltext
+// 2. Umlaute und Sonderzeichen sollten als HTML-Code geschrieben werden:
+//      Zeichen   Ersetzung
+//          ä   &auml;
+//          Ä   &Auml;
+//          ö   &ouml;
+//          Ö   &Ouml;
+//          ü   &uuml;
+//          Ü   &Uuml;
+//          ß   &szlig;
+
+// Menu structure
+#VISU_PC|Visualization PC
+#VISU_PDA|PDA / PocketPC
+#MENU_YIELD_DATA|Yield data
+#MENU_DIAGNOSIS|Diagnosis
+#MENU_CONFIGURATION|Configuration
+#MENU_LAN|Lan
+#MENU_GROUPS|Groups
+#MENU_INVERTER|Inverter
+#MENU_FORECAST|Forecast
+#MENU_GRAPHICS|Graphics
+#MENU_BASIC|Basic
+#MENU_EXPERT|Extended
+#MENU_INTERNAL|Internal
+#MENU_INTERNET|Internet
+#MENU_EMAIL|E-mail
+#MENU_SMS|SMS
+#MENU_EXPORT|WEB-Export
+#MENU_FAILURE|Malfunction
+#MENU_BACKUP|Backup
+#MENU_SYSTEM|System
+#MENU_UPDATE|Update
+
+
+// Haupt-Dialog / Main menu
+#INDEX_TITLE|Main menu
+#NO_YIELD_DATA|Yield data not yet available
+#LABEL_WELCOME|Welcome to the main menu of
+#LABEL_FIRMWARE|Firmware
+#MSG_READING_SYSTIME|Still reading system time...
+#LABEL_NO_INVERTERS|Inverters not yet identified, yield data not yet available
+#LABEL_INVERTERS_RECOG|Inverters identified
+#LABEL_MENU_NAVIG|The further functions can be chosen under the menu items above and on the left side. <br>
+#LABEL_LOGGING_DATA|Recording data.
+
+// Ereignisprotokoll / Event records
+#LABEL_EVENTPROT|Event records
+#LABEL_DEGRADATION|Degradation
+
+// Dialog: Degradation
+#LABEL_DEGRAD_TITEL|Calculation of the gradual decrease (degradation)
+#LABEL_TOP|Top
+#LABEL_MAXVAL|Max. value
+#LABEL_DATE|Date
+#LABEL_SPREIZUNG|Graduation
+#LABEL_BENCHMARK|Benchmark
+#LABEL_HIT|Hit
+#LABEL_AVRG_MAX|Average max
+#LABEL_DEGRAD_INFO1|Calculation of annual decrease (degradation) of the solar energy plant
+#LABEL_DEGRAD_INFO2|For this purpose the annual "average max. day value" is calculated <br>
+#LABEL_DEGRAD_INFO3|This value is calculated with the effective maximum values and a statistical
+#LABEL_DEGRAD_INFO4| adjustment, in order to filter extreme peaks. The comparison of the calculated max. values
+#LABEL_DEGRAD_INFO5| provides an indication on the system performance.<br>
+#LABEL_DEGRAD_INFO6| Data comparison requires a sufficient number of data records per year as well as
+#LABEL_DEGRAD_INFO7| identical system technology.
+#LABEL_ANALYSIS_1YEAR|Data analysis for the year
+#LABEL_ANALYSIS_XYEARS|Data analysis for the years
+#LABEL_UNTIL|Until
+#LABEL_YEAR|Year
+#LABEL_NOT_ENOUGH_DATA|Not sufficient data available for analysis
+#LABEL_DEGRAD_INFO1B|Starting from present data record upwards and downwards each
+#LABEL_DEGRAD_INFO2B| the records with max. 10% deviation will be counted. For further information please refer to manual.
+#LABEL_DEGRAD_TAB|Degradation table
+#LABEL_AVRG_DAYMAX|Avearage day max.
+#LABEL_DECREASE|Decrease
+
+// Dialog: Lan
+#LABEL_LAN_TITEL|Network settings
+#LABEL_LAN_SETTINGS|Network settings
+#LABEL_IP_ADR|IP address
+#LABEL_SUBNET|Subnet mask
+#LABEL_INTERNET_ACCESS|Internet access
+#LABEL_NO_INTERNET|No internet
+#LABEL_ANALOG_MODEM|Analog modem
+#LABEL_GPRS_MODEM|GPRS modem
+#LABEL_GPRS_MODEM_INTERN|GPRS modem (internal)
+#LABEL_ROUTER|Network router
+#LABEL_ROUTER2|(DSL, cable, ISDN)
+#LABEL_GATEWAY|Gateway
+#LABEL_DNS_SERVER|Alternate DNS server
+#LABEL_MODEM_PACK|-Modem package
+#LABEL_I-BY-CALL|Internet-By-Call No.
+#LABEL_USERNAME|User name
+#LABEL_PASSWORD|Password
+#LABEL_DIAL0|Predial "0"
+#LABEL_NO_DIALTONE|Dial tone off
+#LABEL_ALLOW_DIALIN|Allow dialling in
+#LABEL_DIALIN_PW|Dial-in password
+#LABEL_GPRS_PACK|-GPRS package
+#LABEL_CHOOSE_GPRS_PROV|Chose GPRS provider
+#LABEL_SIM_PIN|SIM-PIN
+#LABEL_LAN_REBOOT|Reboot after backup.
+#LABEL_DHCP|Get automatically (DHCP)
+#LABEL_CONN_TIME|Connection
+#LABEL_KEEP_ONLINE|Stay always online (only Fixed-IP tariff)
+
+// Dialog: System groups
+#LABEL_GROUPS|Groups
+#LABEL_ADD_INV|Add Inverter
+#LABEL_ALL_INV_ADDED|All inverters already assigned.
+#LABEL_ADRESS|Address
+#LABEL_SERIALNR|S/N
+#LABEL_REMOVE_INV|Remove inverter
+#LABEL_NO_INV|No assignment of inverters existing.
+#LABEL_NO_GROUPS|All inverters belong to one system
+#LABEL_GROUPS_ON|The inverters are divided into groups
+#LABEL_GROUP_DEF|Group definition
+#LABEL_DESC|Description
+#LABEL_MAX_INV|Inverters (max.15)
+#LABEL_ADD|Add
+#LABEL_DEL|Delete
+#LABEL_SAVE|Save
+#LABEL_CANCEL|Cancel
+
+// Dialog: Wechselrichter / Inverter
+#LABEL_CONFIG_INV|Configurate inverter data
+#LABEL_INV|Inverter
+#LABEL_INV_SHORT|INV
+#LABEL_NUMBER|Number
+#LABEL_NEW_NUMBER|New Number
+#LABEL_DEVICE_NAME|Device Name
+#LABEL_ADR_SN|Address/Serial number
+#LABEL_INST_DC_POWER|Installed generator power
+#LABEL_PAC_CORR_FACTOR|Pac correction factor
+#LABEL_CORR_FACT_INFO|Current meter / Inverter meter * 1000
+#LABEL_MODUL|Module
+#LABEL_FIELD|Field
+#LABEL_CONNECTED|Connected
+#LABEL_DC_POWER|generator power
+#LABEL_STRING1|String 1
+#LABEL_STRING2|String 2
+#LABEL_STRING3|String 3
+#LABEL_MONITORING|Monitoring
+#LABEL_MONI_INFO|Detects inverter breakdown and performance deviation of the generator
+#LABEL_ACTIVATED|Activated
+#LABEL_DEACTIVATED|Deactivated
+#LABEL_NO_SHADOW|Unshadowed from
+#LABEL_CLOCK|o'clock
+#LABEL_MIN_POWER|Min.power feed-in
+#LABEL_OF_DC_POWER|of generator performance
+#LABEL_MSG_AS_EMAIL|Message as e-mail
+#LABEL_SMS|SMS
+#LABEL_DIFF|deviation
+#LABEL_PERIOD_ERR|and period of malfunction
+#LABEL_MINUTE|Min.
+#LABEL_MAXIMUM|Maximum
+#LABEL_MAX_MSG_DAY|Send max. messages per day
+#LABEL_IS_SNOW|Permanent snow covering expected?
+#LABEL_YES|Yes
+#LABEL_NO|No
+#LABEL_SCALE|Graphic - Scale
+#LABEL_DEFINITION|Definition
+#LABEL_YSCALE|Y-Scale
+#LABEL_VIEW_FOR|View:
+#LABEL_DAY|Day
+#LABEL_MONTH|Month
+#LABEL_YEAR|Year
+#LABEL_ALLYEARS|Total years
+#LABEL_MAX_YSCALE|Max.Y-axis
+
+
+// Dialog: Forecast
+#LABEL_DEFINE_FORECAST|Define forecast of the solar energy plant
+#LABEL_SITE_DATA|System data
+#LABEL_SITE_SIZE|System size
+#LABEL_SUBSIDARY|Feed-in tariff
+#LABEL_TARGET_CURRENT|Target / actual - calculation
+#LABEL_YEARLY_TARGET|Yearly target
+#LABEL_MONTHLY_PORTIONS|Monthly portions
+#LABEL_IN_TOTAL|Total
+#LABEL_JAN|Jan
+#LABEL_FEB|Feb
+#LABEL_MAR|Mar
+#LABEL_APR|Apr
+#LABEL_MAY|May
+#LABEL_JUN|Jun
+#LABEL_JUL|Jul
+#LABEL_AUG|Aug
+#LABEL_SEP|Sep
+#LABEL_OCT|Oct
+#LABEL_NOV|Nov
+#LABEL_DEC|Dec
+
+// Dialog: Graphic
+#LABEL_CONFIG_GRAPHICS|Configurate graphics
+#LABEL_VISUAL|Visualisation
+#LABEL_XSCALE|X-scale
+#LABEL_START_DAY|Start of day
+#LABEL_TIME_IN|Time in
+#LABEL_HOUR|hours
+#LABEL_END_DAY|End of day
+
+// Dialog: Internet
+#LABEL_TITEL_INTERNET|System information for homepage and banner
+#LABEL_HOMEPAGE|Homepage
+#LABEL_TITEL|Title
+#LABEL_OPERATOR|Operator
+#LABEL_LOCATION|Location
+#LABEL_MODULS|Module
+#LABEL_INST_POWER|Output
+#LABEL_START_OPERATION|Start of operation
+#LABEL_ORIENTATION|Orientation
+#LABEL_VISABLE_ON_HP|Visible on Homepage
+#LABEL_BANNER|Banner
+#LABEL_LINE1|Line 1
+#LABEL_LINE2|Line 2
+#LABEL_LINE3|Line 3
+#LABEL_LINK_HP|Link to homepage
+
+#LABEL_TITEL_TXT|[Designation of system]
+#LABEL_OPERATOR_TXT|[Name of operator]
+#LABEL_EMAIL_TXT|[E-mail address for contact]
+#LABEL_LOCATION_TXT|[Location]
+#LABEL_MODULS_TXT|[Description of modules and manufacturer]
+#LABEL_INVERTER_TXT|[Inverter and manufacturer]
+#LABEL_INST_POWER_TXT|[System parameters] kWp
+#LABEL_START_OPERATION_TXT|[Date of installation]
+#LABEL_ORIENTATION_TXT|[Module inclination and orientation]
+#LABEL_LINE1_TXT|[Abbrev. desc. of system]
+#LABEL_LINE2_TXT|4,5 kWp in 9999 reference loc
+#LABEL_LINE3_TXT|Conn. to mains since Jan 2008
+#LABEL_LINK_HP_TXT|www.solarlog-home.eu/operator
+
+// Dialog: Email
+#TITEL_EMAIL|Configurate e-mail notification
+#LABEL_START_TESTMAIL|Are you sure you want send test e-mail now?
+#LABEL_EMAIL_SETTINGS|E-mail basic settings
+#LABEL_SMTP_SERVER|SMTP server
+#LABEL_EMAIL_FROM|E-mail address from
+#LABEL_EMAIL_TO|E-mail address to
+#LABEL_EMAIL_NOTIFIC|E-mail notification
+#LABEL_SEND_TIME|Sending time
+#LABEL_MONDAY|Mo
+#LABEL_TUESDAY|Tu
+#LABEL_WEDNESDAY|We
+#LABEL_THURSDAY|Th
+#LABEL_FRIDAY|Fr
+#LABEL_SATURDAY|Sa
+#LABEL_SUNDAY|Su
+#LABEL_LAST_TRANS|Last transmission
+#LABEL_STATUS|Status
+#LABEL_START_TRANS|Start test transmission
+
+// Dialog: SMS
+#TITEL_SMS|Configurate SMS transmission
+#LABEL_START_TESTSMS|Are you sure you want to send test SMS now?
+#LABEL_SMS_BASIC_SETTING|SMS basic settings
+#LABEL_KEYWORD_SUBJECT|Keyword Subject
+#LABEL_SMS_NOTIFIC|SMS notification
+#LABEL_YIELD_IN_SUBJECT|Yield in subject
+
+// Dialog: Export
+#TITEL_EXPORT|Configurate automatic data export
+#LABEL_START_FTP|Are you sure you want to start FTP test transmission?
+#LABEL_START_CSV|Are you sure you want to start CSV data export?
+#LABEL_PLEASE_WAIT|..Please wait..
+#LABEL_DATA_EXPORT|Cyclic data export
+#LABEL_FTP_SERVER|FTP server
+#LABEL_DIRECTORY|Directory
+#LABEL_UPDATE_INTERVAL|Update interval
+#LABEL_MINUTE_SHORT|m
+#LABEL_HOUR_SHORT|h
+#LABEL_DAILY|daily
+#LABEL_DATAFORMAT|Data format
+#LABEL_CSV_FORMAT|CSV
+#LABEL_MANUAL_EXPORT|Manual data export
+#LABEL_CSV_FORMAT2|CSV format
+#LABEL_CURRENT_VALUES|Current values
+#LABEL_MAX_30_DAYS|Max. 30 days
+#LABEL_DAILY_VALUES|Daily values
+#LABEL_ALL_INV_INDIVID|all inverters individually
+#LABEL_ALL_INV_SUM|all inverters totalized
+
+// Dialog: Störung / Failure
+#TITEL_FAILURE|Notification in case of malfunction
+#LABEL_LIST_STATUS|List of all status codes:
+#LABEL_LIST_ERROR|List of all error codes:
+#LABEL_NUMBER|No.
+#LABEL_ACTIVE|Active
+#LABEL_ERROR|Error
+#LABEL_FROM|From
+#LABEL_CODE|Code
+#LABEL_UNTIL|To
+#LABEL_AFTER_N|After x
+#LABEL_ACTIVATE_MEASURE|Activate measurerments
+#LABEL_MAX_EACH_DAY|Max. number per day
+
+// Dialog: Backup
+#TITEL_BACKUP|Automatic/manual backup
+#LABEL_CONFIRM_BACKUP|Are you sure you want to load backup?
+#LABEL_CONFIRM_IMPORT|Are you sure you want to start data import? (All existing data will be deleted)
+#LABEL_CONFIRM_SAVE_BACKUP|Are you sure you want to create a backup?
+#LABEL_BACKUP|Backup
+#LABEL_AUTOMATICALLY|Automatically
+#LABEL_BACKUP_INTERVAL|Backup interval
+#LABEL_DAILY2|Daily
+#LABEL_WEEKLY|Weekly
+#LABEL_MANUALLY|Manually
+#LABEL_SAVE_DATA_HD|Save data on hard drive
+#LABEL_CREATE|Process data
+#LABEL_LOAD_DATA_HD|Load data from hard drive
+#LABEL_LOAD|Load
+#LABEL_DATA_CORRECTION|Data correction
+#LABEL_DAILY_YIELD|Daily value
+#LABEL_FOR_EXAMPLE|for example
+#LABEL_ADJUST|Adjust
+#LABEL_DATA_IMPORT|Data import
+#LABEL_INITAL_INVENTORY|Initial inventory of day yields in CSV-Format
+#LABEL_DATE_FORMAT|DD.MM.YYYY
+#LABEL_DAY_YIELD_IN|Day yield in
+
+// Dialog: System
+#TITEL_SYSTEM|Administrate system settings
+#LABEL_CONFIRM_RESTORE_SYSTEM|Are you sure you want to load system settings?
+#LABEL_CONFIRM_RESET_SYSTEM|Are you sure you want to reset system settings?
+#LABEL_SYSTEM_BACKUP|System backup
+#LABEL_SAVE_SYSTEM_DATA_HD|Save system settings on hard drive
+#LABEL_RESTORE_SYSTEM_SETTINGS|Load system settings from hard drive
+#LABEL_SYSTEM_SETTINGS|System settings
+#LABEL_CURRENT_SERIAL|Current serial number
+#LABEL_LICENCE_KEY|Licence key
+#LABEL_SAVE_INTERVAL|Storage interval
+#LABEL_MINUTE_SHORT2|min
+#LABEL_TIMEZONE|Time zone GMT
+#LABEL_CENTRAL_EUROPE|Central Europe=+1
+#LABEL_DATE_TIME|Date / Time
+#LABEL_NEW|New
+
+// Dialog: Update
+#TITEL_UPDATE_FIRMWARE|Firmware update
+#LABEL_CONFIRM_FIRM_UPD1|Firmware-Update - Confirmation\n\nDid you effect a backup of the system data?
+#LABEL_CONFIRM_FIRM_UPD2|Did you also effect a data backup?
+#LABEL_CONFIRM_FIRM_UPD3|Are you sure you want to load the firmware update?
+#LABEL_UPDATE_FIRMWARE|Update firmware
+#LABEL_DO_DATA_BACKUP0|Attention!
+#LABEL_DO_DATA_BACKUP1|Do not fail to carry out data backup
+#LABEL_DO_DATA_BACKUP2|before
+#LABEL_DO_DATA_BACKUP3|loading a firmware update!
+#LABEL_UPDATE_INFO1|Current software version for the
+#LABEL_UPDATE_INFO2|can be downloaded from
+#LABEL_UPDATE_INFO3|.
+#LABEL_UPDATE_INFO4|Save firmware file on hard drive and choose with file searching button below.
+#LABEL_UPDATE_INFO5|Update starts when 'Import' is chosen. The import process must not be interrupted!
+#LABEL_CURRENT_FIRMWARE|Current firmware version
+#LABEL_FIRMWARE_DATE_FROM|from
+#LABEL_LOAD2|Update
+
+# Email / SMS / FTP
+#LABEL_SERVER_DOMAIN|solarlog-home.eu
+#LABEL_SERVER_USERNAME|user name
+#LABEL_SERVER_PASSWORD|password
+#LABEL_SERVER_EMAIL1|user name@solarlog-home.eu
+#LABEL_SERVER_OWN_EMAIL|own_e-mail_address
+#LABEL_SERVER_SMS_SAMPLE|SMS0173...
+
+// Login
+#TITEL_LOGIN|Login for configuration area
+#LABEL_LOGIN|Login
+
+// System 2
+#LABEL_ADDITIONAL_PW|Additional login?
+#LABEL_OLD_PW|Old password
+#LABEL_NEW_PW|New password
+#LABEL_REPEAT_PW|Repeat password
+
+// ************ 19.02.2009 NEU
+// Dialog: System
+#LABEL_CHOOSE_LANG|Choose language
+
+// Dialog: Anfangskonfiguration
+#LABEL_BEGIN_TITEL|Start configuration
+#MENU_START|Start
+#MENU_BEGIN|Start config.
+#LABEL_CHOOSE_INV_B|Inverter on RS485/422-B
+#LABEL_PLEASE_CHOOSE|Please choose
+
+#LABEL_CONFIRM_RESET_FACTORY|Set to factory defaults
+#LABEL_RESET|Reset
+
+// Dialog: Mainmenu
+#LABEL_MORE_INFO|More information
+#LABEL_NUM_INV|Inverters
+#LABEL_PLANT_SIZE|Plant size
+#LABEL_SERIALNUM|Serialnumber
+
+// Dialog: Inverter sequence
+#LABEL_SORT_TITEL|Inverters order
+
+#LABEL_SORT_DESC1|The inverters can be reordered within the interface area
+
+#LABEL_SORT_DESC2|(same colour).
+
+#LABEL_CURRENT|Currently
+
+#LABEL_SORT_POS|Pos.
+
+#MENU_SORT|Inverter order
+
+#LABEL_SORT_CONFIRM|Save new Inverter position?
+
+#LABEL_SORT_MISSING|Not all inverters assigned.
+
+#LABEL_SORT_NOREORG|Leave data unchanged (eg inverter exchange)
+
+#LABEL_SORT_REORG|Reorganize data to new positions (eg extensions). Can take some time depending on data volume.
+
+#LABEL_SORT_INIT|Erase all data (recommended at initial setup)
+
+#LABEL_SORT_RESTARTMSG|Note: After saving, the device will be rebooted.
+
+// Dialog: Einspeisemanagement
+#LABEL_PM_TITEL|Power Management
+#MENU_PM|Power Managmt.
+#LABEL_PM_DESC1|The digital inputs and power levels can be setup
+#LABEL_PM_DESC2|to the requirements of the utility.
+#LABEL_PM_RELAY|Dry contact
+// for Translater: "K1" means "Kanal1"
+#LABEL_PM_C1|C1
+#LABEL_PM_C2|C2
+#LABEL_PM_C3|C3
+#LABEL_PM_C4|C4
+#LABEL_PM_POWER|Power in %<br>(max.nominal power)
+#LABEL_PM_DIGI_IN|Digital input
+#LABEL_PM_DIGI_1|D_IN_1
+#LABEL_PM_DIGI_2|D_IN_2
+#LABEL_PM_DIGI_3|D_IN_3
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_STEP1|Level 1
+#LABEL_PM_STEP2|Level 2
+#LABEL_PM_STEP3|Level 3
+#LABEL_PM_STEP4|Level 4
+#LABEL_PM_RELAIS|Close dry contact at level 4
+#LABEL_PM_MONITORING|Monitoring and protocoling
+#LABEL_PM_INV|Inverter adjustment
+#LABEL_PM_INV_NOTE|Note: Function is dependent on type of inverter
+#LABEL_PM_RELAIS_CONF|Channel- and level setup
+#LABEL_PM_PWR_CHG|To prevent big power changes (e.g. full load throw-off), it is possible to specify the max.power change per interval. 1 interval is usually 15 sec.
+#LABEL_PM_PWR_CHG_PROZ|max. power change
+#LABEL_PM_NETTING|Network link
+#LABEL_PM_NET_DESC1|The power reduction can be transmit via network to up to 9 other
+// "... SolarLog ..."
+#LABEL_PM_NET_DESC2|Specify IP-adress of each unit. Other input fields are displayed automatically.
+#LABEL_PM_IPADRESS|IP-adress
+
+// Dialog: iSCB - "intelligent String Connection Box"
+
+#LABEL_CONFIG_SCB|Configure iSCB
+
+#LABEL_CONFIG_SCB|Configure SCB
+
+#LABEL_SCB_TITEL|iSCB
+
+#LABEL_SCB_TITEL|SCB
+
+#MENU_SCB|iSCB
+
+#MENU_SCB|SCB
+
+#LABEL_INGENERAL|General
+
+//#LABEL_INGENERAL|intelligent String Connection Box
+
+#LABEL_CHOOSE_TYP|Choose iSCB type
+
+#LABEL_CHOOSE_TYP|Choose SCB type
+
+#LABEL_ACT_AUTO_CALIBR|Automatic offset callibration of current inputs (at nighttime)
+
+// for Translater: "um" means "um 17 Uhr"
+
+#LABEL_AT|at
+
+#LABEL_SCB_CONFIG|iSCB configuration
+
+#LABEL_SCB_CONFIG|SCB configuration
+
+#LABEL_CHOOSE|Selection
+
+#LABEL_CONNECTED2|Connected
+
+#LABEL_WORKING|in operation
+
+#LABEL_ADRESS2|Address
+
+#LABEL_QUANT_ANALOG|Number of analog inputs (1-24)
+
+#LABEL_QUANT_DIGITAL|Number of digital inputs (1-8)
+
+#LABEL_DEDICATED_INV|Associated inverters
+
+#LABEL_CHAN_CONFIG|Channel configuration
+
+#LABEL_ANALOG|Analog
+
+#LABEL_TYPE|Type
+
+#LABEL_POWER|Power
+
+#LABEL_OFFSET|Offset
+
+#LABEL_SLOPE|Slope
+
+#LABEL_DIGITAL|Digital
+
+#LABEL_ALARM|Alarm
+
+#LABEL_UNUSED|Unused
+
+#LABEL_UNASSIGNED|Unassigned
+
+// Dialog: Anfangskonfiguration - ab 5.12.09
+
+#LABEL_SMABT|SMA Bluetooth
+
+#LABEL_SMABT_SERIAL|Inverter serial number
+
+
+// ab 24.12.09
+#LABEL_CURRENCY|Cent
+
+// Dialog: SCB_SIAC - ab 18.01.10
+#LABEL_QUANT_STRINGS_SIAC|Number of strings (1-12)
+#LABEL_INTERFACE485|RS485-interface
+#LABEL_SIAC|SIAC
+#LABEL_STRING|String
+
+// Dialog: SCB Current Data
+#VISU_SCB|SCB Monitor
+#LABEL_SCB_NO_DATA|SCB inactive or no data
+#LABEL_DUPLICATE|Duplicate
+
+// Dialog: PM  - ab 25.02.10
+#LABEL_PM_LOAD_MANAGE|Load Management
+#LABEL_PM_LOAD_MAN_DESC|Powerreduction at phase differences > 4.6kW (only valid for 1-phase INV)
+#LABEL_PM_WHICH_PHASE|Feed-in on phase
+#LABEL_PM_WHICH_PHASE2|(=0 for 3-phase feed-in)
+
+// Dialog: SCB_SMAX - ab 10.03.10
+#LABEL_QUANT_STRINGS_SMAX|Number of strings (1-24)
+#LABEL_SMAX|SolarMax
+
+// Dialog: SCB_KNBX - ab 11.05.10
+#LABEL_QUANT_STRINGS_KNBX|Anzahl Strings (1-16)
+#LABEL_KNBX|Knubix
+
+// Email / FTP - Solar-Log WEB - 06.07.10
+#LABEL_SERVER_FTP_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL1_CLASSIC2|benutzername@home.solarlog-web.eu
+#LABEL_SERVER_FTP_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL1_FULL|username@solarlog-web.eu
+#LABEL_SERVER_FTP_SELF|own-domain.net
+#LABEL_SERVER_EMAIL_SELF|own-smtp-server
+#LABEL_SERVER_EMAIL1_SELF|username@smtp.server
+
+// Dialog: Internet - 06.07.10
+#LABEL_SOLARLOG_WEB|Solar-Log WEB
+#LABEL_WEB_FULL|Full Service
+#LABEL_WEB_CLASSIC2|Classic-2nd Edition
+#LABEL_WEB_SELF|Self Made
+#LABEL_WEB_CLASSIC1|Classic-1st Edition ('solarlog-home')
+
+// Dialog: Lan - 16.07.10
+#LABEL_SMS_DIRECT|SMS directly over modem
+
+// Dialog: Einspeisemanagement - 20.07.10
+#LABEL_PM_REACTIVE_POWER_CONTROL|Reactive Power Control
+#LABEL_PM_FIX_COS_PHI|fix Value cos(Phi)
+#LABEL_PM_FIX_REACTIVE_POWER|fix Reactive Power (Var)
+#LABEL_PM_LINE_COS_PHI|variable Value cos(Phi) over line
+#LABEL_PM_LINE_REACTIVE_POWER|variable Reactive Power over line
+#LABEL_PM_CONTR_COS_PHI|controlled Value cos(Phi) 
+#LABEL_PM_VAR|Var
+#LABEL_PM_COS_PHI|Cos(Phi)
+#LABEL_PM_FROM|From
+#LABEL_PM_TO|To
+#LABEL_PM_REACTIVE_POWER|Reactive Power
+#LABEL_PM_ACTIVE_POWER|Active Power
+#LABEL_PM_P_PN|P/Pn
+#LABEL_PM_UNDER_EXCITED|lagging
+#LABEL_PM_STEP|Step
+#LABEL_PM_EXAMPLE_COS_LINE1|Example above:
+#LABEL_PM_EXAMPLE_COS_LINE2|From P/Pn 0.20    Cos(Phi) 0.95 
+#LABEL_PM_EXAMPLE_COS_LINE3|To P/Pn 0.80    Cos(Phi) 0.95   lagging
+#LABEL_PM_EXAMPLE_RAP_LINE1|Example above:
+#LABEL_PM_EXAMPLE_RAP_LINE2|From Active Power 2500 W Reactive Power 0 Var 
+#LABEL_PM_EXAMPLE_RAP_LINE3|To Active Power 5000 W Reactive Power 1400 Var
+
+// Dialog: Wechselrichter - 02.08.10
+#LABEL_ACCESS_KEY|Authorization keys
+#LABEL_ACCESS_KEY_I|Authorization key I
+#LABEL_ACCESS_KEY_II|Authorization key II
+#LABEL_ACCESS_KEY_III||Authorization key III
+#LABEL_ACCESS_KEY_CUR|General Authorization key
+#LABEL_DIGITAL_COUNTER_AVAIL|Electric counter at S0 input
+#LABEL_ENERGY_METER_INV|Inverter mode
+#LABEL_ENERGY_METER_YIELD|Overall yield meter
+#LABEL_ENERGY_METER_USAGE|Consumption meter
+#LABEL_MODULFIELD||Module field (1-9)
+#LABEL_IMPULSFACTOR|Pulse factor
+#LABEL_MPP1|MPP-Tracker 1
+#LABEL_MPP2|MPP-Tracker 2
+#LABEL_MPP3|MPP-Tracker 3
+
+// Dialog: System - 07.10.10
+#LABEL_CHOOSE_COUNTRY|Select country
+#LABEL_COUNTRY_LOAD|Activate
+#LABEL_DST_SETTING|Daylight Saving Time
+
+// Dialog: Wechselrichter - 11.10.10
+#LABEL_METER_ADDR_FEEDIN|Address electricity/export meter
+#LABEL_METER_ADDR_PRODUCE|Address production meter
+
+// Dialog: Anfangskonfiguration - 30.11.10
+#LABEL_CHOOSE_INV_E|Inverters at Network(Ethernet)
+
+// Dialog: Powermanagement - 10.12.10
+#LABEL_HARDWARE_UPDATE|( Hardware Update necessary!!! )
+
+// Dialog: Wechselrichtertausch - 08.01.11
+#LABEL_EXCHANGE_TITEL|Inverters exchange
+#LABEL_EXCHANGE_DESC1|The inverters can be exchanged within the interface area
+#LABEL_EXCHANGE_DESC2|(same colour).
+#MENU_EXCHANGE|Inverter exchange
+#LABEL_EXCHANGE_SCANNING|Starting subseq. inverter identification
+#LABEL_EXCHANGE_NO_MANUAL|Function only available, if the addresses can't be set on the inverter
+
+// Dialog: SCB-Knubix - 18.02.11
+#LABEL_SENSORBOX|Sensorbox
+#LABEL_SENSOR_OUTSIDE_TEMP|Sensor for outside temperature connected
+#LABEL_SENSOR_WIND|Wind sensor connected
+
+// Dialog: WLAN-Konfiguration - 08.01.11
+#LABEL_WLAN_TITEL|WiFi
+#LABEL_WLAN_SELECT|Choose Network
+#LABEL_WLAN_SECURITY|Security Settings
+#LABEL_WLAN_IPSETTINGS|IP-Settings
+#LABEL_WLAN_KEY|Network-Key
+#MENU_WLAN|WiFi
+#LABEL_WLAN_SCANNING|Find wireless Networks
+#LABEL_WLAN_AUTOMATIC|determine automatically
+#LABEL_WLAN_NAME|Network-Name (SSID)
+#LABEL_WLAN_ENCRYPTION|Encryption
+#LABEL_WLAN_CONNECTED|Connected
+#LABEL_WLAN_DISCONNECTED|Disconnected
+#LABEL_WLAN_DISABLED|Deactivated
+#LABEL_WLAN_SLERROR|SL Offline
+#LABEL_WLAN_INITIALIZING|Initializing
+
+
+// Dialog: Mainmenu - 12.04.11
+#LABEL_NUM_METER|Digital meters
+#LABEL_NUM_SENSOR|Sensors

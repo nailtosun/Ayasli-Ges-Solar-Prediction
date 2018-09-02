@@ -1,0 +1,77 @@
+/* CSS for all pages */
+
+* { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16px; color: #524d4d; }
+
+/* -------------------------------------------- */
+
+body { background-image: url(bg_kachel.gif); }
+h1 { color: #125fae; font-size: 20px; font-weight: normal; margin: 0px 0px 15px 0px; }
+h2 { color: #125fae; font-size: 16px; font-weight: normal; margin: 0px 0px 10px 0px; }
+
+head1 { color: #125fae; font-size: 20px; font-weight: normal; margin: 0px 0px 15px 0px; }
+sup {color: #125fae; }
+
+/* -------------------------------------------- LAYOUT */
+
+#rap { width: 100%; text-align: center; }
+#inhalt { width: 750px; text-align: left; background-image: url(bg_inhalt.gif); border-right: 1px solid #f4f4f4; border-left: 1px solid #f4f4f4; border-bottom: 1px solid #f4f4f4; margin-right: auto; margin-left: auto; margin-bottom: 15px; }
+#head { width: 750px; height: 115px; border-bottom: 3px solid #125fae; background-color: #fff; }
+#logo { float: left; height: 112px; width: 150px; }
+#headright { float: left; width: 600px; height: 27px; background-image: url(bg_sds.gif); background-repeat: no-repeat; padding: 85px 0px 0px 0px; }
+#contentleft { float: left; width: 150px; }
+#contentright { float: left; width: 540px; padding: 40px 30px 40px 30px; }
+
+#footer { width: 750px; margin-right: auto; margin-left: auto; margin-bottom: 15px; border-top: 3px solid #125fae; background-color: #fff; }
+#footer a { color: #524d4d; }
+
+/* -------------------------------------------- MENU */
+
+.menu td { background-color: #fff; padding: 0px 10px; }
+.menu td a { text-decoration: none; }
+.menu .act { background: #125fae; }
+.menu .act a { color: #fff; font-weight: bold; }
+.menu .in-act { color: #524d4d;}
+.menu td a:hover { color: #000;}
+
+/* -------------------------------------------- subMENU */
+
+.submenu li { list-style-type: none; display: block; width: 140px; border-bottom: 1px solid #fff; padding: 5px; }
+.submenu li a { color: #125fae; font-weight: bold; text-decoration: none; }
+.submenu li .act { color: #524d4d; font-weight: bold; text-decoration: none; }
+.submenu li a:hover { color: #a2a3a5; font-weight: bold; text-decoration: none; }
+.submenu ul { list-style-type: none; }
+.submenu ul li { width: 110px; padding: 5px 0px 5px 15px; margin: 0px 0px -5px 10px; border: none; background: url(submenupfeil.gif) no-repeat left; }
+.submenu ul li a { font-weight: normal; color: #524d4d; }
+.submenu ul li a:hover { font-weight: bold; color: #524d4d; }
+.submenu ul li .act{ font-weight: bold; color: #524d4d; }
+
+/* -------------------------------------------- LINKS */
+
+#contentright a { color: #125fae; text-decoration: none; }
+#contentright a:hover { color: #125fae; text-decoration: underline; }
+
+/* -------------------------------------------- FORM */
+
+.table_suche td { padding: 5px 0px; }
+.einzeilig { min-width:80%; padding: 3px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; border: 1px solid #ababab; }
+.einzeiligshort { padding: 3px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; border: 1px solid #ababab; }
+.select_einzeilig { font-family: Arial, Helvetica, sans-serif; font-size: 11px; border: 1px solid #ababab; }
+.button { /*width: 85px;*/ height: 20px; color: #fff; border: none; background-color: #125fae; }
+
+/* -------------------------------------------- FONT */
+
+.white_big { color: #fff; font-size: 24px; font-weight: bold; line-height: 26px; }
+.fliesstext_blau { color: #125fae; }
+.fliesstext_blau_bold { color: #125fae; font-weight: bold; }
+
+/* -------------------------------------------- CONTENT BOX */
+
+#contentbox { width: 500px; border: 1px solid #f4f4f4; background: url(bg_strip_1.jpg); padding: 20px; margin: 0px 0px 15px 0px; }
+
+/* -------------------------------------------- TABLE */
+
+.std_table td { padding: 3px 0px; border-bottom: 1px solid #eeeeee; border-right: 10px solid #fff; }
+.table_events td { font-size: 11px; color:black; }
+.table_events_h td { text-align:left; }
+.form_table { margin: 0px 0px 0px 40px; }
+.form_table td { padding: 3px 0px; vertical-align: middle; }

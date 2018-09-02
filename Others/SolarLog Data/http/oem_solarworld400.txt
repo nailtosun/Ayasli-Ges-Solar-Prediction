@@ -1,0 +1,19 @@
+// OEM specific bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 31.03.2008
+// Language: deutsch
+
+#COMPANY|&nbsp;&nbsp;&nbsp;Copyright 2009 SolarWorld AG &nbsp;
+#COMPANY_EMAIL|info@solarworld.de
+#COMPANY_LOGO|sw_logo.gif
+#COMPANY_WEB|www.solarworld.de
+#COMPANY_FIRMWARE|www.suntrol-portal.com
+#LOGGER_NAME|Suntrol STL400
+#LOGGER_NAME2|Solar Monitoring System
+#LOGGER_NAME3|(c) 2009 SolarWorld AG
+#LOGGER_FORMAT|Suntrol STL400
+#LOGGER_FORMAT2|
+#BASIC_WEB_SETTINGS|Grundeinstellungen 'www.suntrol-portal.com'
+#LOGGER_FILENAME|suntrol
+#DOGM_BOOT1|Suntrol400
+#DOGM_BOOT2|2009 SolarWorld

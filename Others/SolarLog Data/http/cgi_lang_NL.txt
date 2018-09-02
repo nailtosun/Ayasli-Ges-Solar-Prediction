@@ -1,0 +1,625 @@
+// language bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 25.04.2008
+// Language: Nederlands
+//
+// Anmerkungen:
+// 1. Die Übersetzung sollte möglichst weniger oder gleich viel Zeichen belegen als der Originaltext
+// 2. Umlaute und Sonderzeichen sollten als HTML-Code geschrieben werden:
+//      Zeichen   Ersetzung
+//          ä   &auml;
+//          Ä   &Auml;
+//          ö   &ouml;
+//          Ö   &Ouml;
+//          ü   &uuml;
+//          Ü   &Uuml;
+//          ß   &szlig;
+
+// Menu structure
+#VISU_PC|PC-weergave
+#VISU_PDA|PocketPC
+#MENU_YIELD_DATA|Opbrengsten
+#MENU_DIAGNOSIS|Diagnose
+#MENU_CONFIGURATION|Configuratie
+#MENU_LAN|Lan
+#MENU_GROUPS|Groepen
+#MENU_INVERTER|Wisselrichter
+#MENU_FORECAST|Prognose
+#MENU_GRAPHICS|Grafieken
+#MENU_BASIC|Basis
+#MENU_EXPERT|Uitgebreid
+#MENU_INTERNAL|Intern
+#MENU_INTERNET|Internet
+#MENU_EMAIL|Email
+#MENU_SMS|SMS
+#MENU_EXPORT|WEB-Export
+#MENU_FAILURE|Storing
+#MENU_BACKUP|Backup
+#MENU_SYSTEM|System
+#MENU_UPDATE|Update
+
+
+// Haupt-Dialog / Main menu
+#INDEX_TITLE|Hoofdmenu
+#NO_YIELD_DATA|Nog geen opbrengsten beschikbaar.
+#LABEL_WELCOME|Welkom in het hoofdmenu van
+#LABEL_FIRMWARE|Firmware
+#MSG_READING_SYSTIME|Systeemtijd wordt gelezen...
+#LABEL_NO_INVERTERS|Wisselrichter nog niet gekend, nog geen gegevens beschikbaar
+#LABEL_INVERTERS_RECOG|Wisselrichter gevonden - herkend
+#LABEL_MENU_NAVIG|Via de menu’s boven en links van deze pagina, kunnen andere functies worden opgeroepen
+#LABEL_LOGGING_DATA|Verzamelt gegevens.
+
+// Logboek / events protocol
+#LABEL_EVENTPROT|Logboek
+#LABEL_DEGRADATION|Degradatie
+
+// Dialog: Degradation
+#LABEL_DEGRAD_TITEL|): Berekening vermogendaling (degradatie)
+#LABEL_TOP|Top
+#LABEL_MAXVAL|Max Wh
+#LABEL_DATE|Datum
+#LABEL_SPREIZUNG|Spreiding
+#LABEL_BENCHMARK|Evaluatie
+#LABEL_HIT|Treffer
+#LABEL_AVRG_MAX|gemid. max
+#LABEL_DEGRAD_INFO1|Berekening jaarlijkse vermogendaling (degradatie) van de fotovoltaïsche panelen
+#LABEL_DEGRAD_INFO2|Hiervoor wordt voor elk jaar het “gemiddelde dagmaximum” berekend.<br>
+#LABEL_DEGRAD_INFO3|Deze worden afgeleid uit de dagelijkse maximum waarden en een wiskundige vergelijking,
+#LABEL_DEGRAD_INFO4| om pieken weg te filteren. Het vergelijken van deze gegevens laat toe
+#LABEL_DEGRAD_INFO5| een re&euml;le inschatting te maken over de toestand van de panelen.<br>
+#LABEL_DEGRAD_INFO6| De voorwaarden om tot  een goede inschatting te komen zijn: er moeten over een periode van een jaar,
+#LABEL_DEGRAD_INFO7| voldoende waarden worden gelogd, en de onderdelen van de PV-installatie mogen niet worden gewijzigd.
+#LABEL_ANALYSIS_1YEAR|Evaluatie gegevens van
+#LABEL_ANALYSIS_XYEARS|Evaluatie van de gegevens van
+#LABEL_UNTIL|tot
+#LABEL_YEAR|Jaar
+#LABEL_NOT_ENOUGH_DATA|Te weinig gegevens beschikbaar
+#LABEL_DEGRAD_INFO1B|Uitgaande van de huidige gegevens worden de waarden met een afwijking van
+#LABEL_DEGRAD_INFO2B| plus en min 10% in rekening gebracht. Meer info vind je in het handboek.
+#LABEL_DEGRAD_TAB|Degradatietabel
+#LABEL_AVRG_DAYMAX|gemid. max/dag
+#LABEL_DECREASE|Daling
+
+// Dialog: Lan
+#LABEL_LAN_TITEL|Netwerkinstellingen
+#LABEL_LAN_SETTINGS|Netwerkinstellingen
+#LABEL_IP_ADR|IP adres
+#LABEL_SUBNET|Subnet Masker
+#LABEL_INTERNET_ACCESS|Internettoegang
+#LABEL_NO_INTERNET|Geen internet
+#LABEL_ANALOG_MODEM|Analoge modem
+#LABEL_GPRS_MODEM|GPRS modem
+#LABEL_GPRS_MODEM_INTERN|GPRS modem (Intern)
+#LABEL_ROUTER|Netwerk router
+#LABEL_ROUTER2|(ADSL, Kabel, ISDN)
+#LABEL_GATEWAY|Gateway
+#LABEL_DNS_SERVER|extra DNS-Server
+#LABEL_MODEM_PACK|-Modem-pakket
+#LABEL_I-BY-CALL|Internet-By-Call Nr.
+#LABEL_USERNAME|Gebruikersnaam
+#LABEL_PASSWORD|Paswoord
+#LABEL_DIAL0|"0" kiezen
+#LABEL_NO_DIALTONE|Dial tone uit
+#LABEL_ALLOW_DIALIN|Inbellen toestaan
+#LABEL_DIALIN_PW|Inbel paswoord
+#LABEL_GPRS_PACK|-Gsm-pakket
+#LABEL_CHOOSE_GPRS_PROV|Gsm-provider ausw&auml;hlen
+#LABEL_SIM_PIN|SIM PIN
+#LABEL_LAN_REBOOT|wordt na het bewaren herstart.
+#LABEL_DHCP|get automatically (DHCP)
+#LABEL_CONN_TIME|Connection
+#LABEL_KEEP_ONLINE|Keep online (only Fix-IP tariff)
+
+// Dialog: Anlagengruppen
+#LABEL_GROUPS|Groepen
+#LABEL_ADD_INV|WR toevoegen
+#LABEL_ALL_INV_ADDED|Alle wisselrichters zijn toegewezen.
+#LABEL_ADRESS|Adr
+#LABEL_SERIALNR|S/N
+#LABEL_REMOVE_INV|WR verwijderen
+#LABEL_NO_INV|Geen wisselrichter volgorde beschikbaar.
+#LABEL_NO_GROUPS|Alle wisselrichters behoren tot dezelfde groep
+#LABEL_GROUPS_ON|De wisselrichters worden in groepen verdeeld
+#LABEL_GROUP_DEF|Groepen defini&euml;ren
+#LABEL_DESC|Naam
+#LABEL_MAX_INV|WR (max.15)
+#LABEL_ADD|Toevoegen
+#LABEL_DEL|Verwijderen
+#LABEL_SAVE|Bewaren
+#LABEL_CANCEL|Annuleren
+
+// Dialog: Wechselrichter / Inverter
+#LABEL_CONFIG_INV|Configuratie wisselrichter
+#LABEL_INV|Wisselrichter
+#LABEL_INV_SHORT|WR
+#LABEL_NUMBER|Nummer
+#LABEL_NEW_NUMBER|Nieuw nummer
+#LABEL_DEVICE_NAME|Naam toestel
+#LABEL_ADR_SN|Adres/Serienummer
+#LABEL_INST_DC_POWER|Vermogen aangesloten generator
+#LABEL_PAC_CORR_FACTOR|Correctiefactor Pac
+#LABEL_CORR_FACT_INFO|kWh-meter / teller-WR * 1000
+#LABEL_MODUL|PV-
+#LABEL_FIELD|veld
+#LABEL_CONNECTED|Vermogen
+#LABEL_DC_POWER|aangesloten generator
+#LABEL_STRING1|String 1
+#LABEL_STRING2|String 2
+#LABEL_STRING3|String 3
+#LABEL_MONITORING|Overwaking
+#LABEL_MONI_INFO|Herkent uitval wisselrichter en opbrengstdaling van de panelen
+#LABEL_ACTIVATED|Aan
+#LABEL_DEACTIVATED|Uit
+#LABEL_NO_SHADOW|Schaduwloos van
+#LABEL_CLOCK|uur
+#LABEL_MIN_POWER|Bij min.
+#LABEL_OF_DC_POWER|van het geïnstalleerde vermogen
+#LABEL_MSG_AS_EMAIL|Melding via email
+#LABEL_SMS|SMS
+#LABEL_DIFF|Afwijking
+#LABEL_PERIOD_ERR|gedurende
+#LABEL_MINUTE|min.
+#LABEL_MAXIMUM|Maximum
+#LABEL_MAX_MSG_DAY|meldungen per dag versturen
+#LABEL_IS_SNOW|Moet er rekening gehouden worden langdurige sneeuwbedekking?
+#LABEL_YES|Ja
+#LABEL_NO|Neen
+#LABEL_SCALE|Schaal grafieken
+#LABEL_DEFINITION|Definitie
+#LABEL_YSCALE|Y-Schaal
+#LABEL_VIEW_FOR|Scherm
+#LABEL_DAY|Dag
+#LABEL_MONTH|Maand
+#LABEL_YEAR|Jaar
+#LABEL_ALLYEARS|Alle jaren
+#LABEL_MAX_YSCALE|Max.Y-As
+
+// Dialog: Prognose
+#LABEL_DEFINE_FORECAST|Verwachte opbrengsten defini&euml;ren
+#LABEL_SITE_DATA|Gegevens panelen
+#LABEL_SITE_SIZE|Geïnstalleerd vermogen
+#LABEL_SUBSIDARY|Vergoeding
+#LABEL_TARGET_CURRENT|Verwacht. / Werk. - berekening
+#LABEL_YEARLY_TARGET|Verwacht per jaar
+#LABEL_MONTHLY_PORTIONS|Aandeel per maand
+#LABEL_IN_TOTAL|samen
+#LABEL_JAN|jan
+#LABEL_FEB|feb
+#LABEL_MAR|maa
+#LABEL_APR|apr
+#LABEL_MAY|mei
+#LABEL_JUN|jun
+#LABEL_JUL|jul
+#LABEL_AUG|aug
+#LABEL_SEP|sep
+#LABEL_OCT|okt
+#LABEL_NOV|nov
+#LABEL_DEC|dec
+
+// Dialog: Grafik
+#LABEL_CONFIG_GRAPHICS|Visualisatie gegevens configureren
+#LABEL_VISUAL|Visualisatie
+#LABEL_XSCALE|X-Schaal
+#LABEL_START_DAY|Begin van de dag
+#LABEL_TIME_IN|Tijd in
+#LABEL_HOUR|uur
+#LABEL_END_DAY|Einde van de dag
+
+// Dialog: Internet
+#LABEL_TITEL_INTERNET|Gegevens voor homepage en banner
+#LABEL_HOMEPAGE|Homepage
+#LABEL_TITEL|Koptekst
+#LABEL_OPERATOR|Eigenaar
+#LABEL_LOCATION|Plaats
+#LABEL_MODULS|Aantal en type panelen
+#LABEL_INST_POWER|Vermogen
+#LABEL_START_OPERATION|In bedrijf sinds
+#LABEL_ORIENTATION|Ori&euml;ntatie
+#LABEL_VISABLE_ON_HP|Weergeven op homepage
+#LABEL_BANNER|Banner
+#LABEL_LINE1|Lijn 1
+#LABEL_LINE2|Lijn 2
+#LABEL_LINE3|Lijn 3
+#LABEL_LINK_HP|Link naar homepage
+
+#LABEL_TITEL_TXT|[Anlagenbezeichnung]
+#LABEL_OPERATOR_TXT|[Betreibername]
+#LABEL_EMAIL_TXT|[Kontakt-Emailadresse]
+#LABEL_LOCATION_TXT|[Standort der Anlage]
+#LABEL_MODULS_TXT|[Beschreibung der Module und Hersteller]
+#LABEL_INVERTER_TXT|[Wechselrichterbezeichnung und Hersteller]
+#LABEL_INST_POWER_TXT|[Größe der Anlage] kWp
+#LABEL_START_OPERATION_TXT|[Installationsdatum]
+#LABEL_ORIENTATION_TXT|[Modulneigung und Ausrichtung]
+#LABEL_LINE1_TXT|[Kurzbez.Anlage]
+#LABEL_LINE2_TXT|4,5 kWp in 99999 Musterort
+#LABEL_LINE3_TXT|im Netz seit Januar 2008
+#LABEL_LINK_HP_TXT|www.solarlog-home.eu/gebruikersnaam
+
+// Dialog: Email
+#TITEL_EMAIL|Email berichtgeving configureren
+#LABEL_START_TESTMAIL|Email-Testbericht versturen?
+#LABEL_EMAIL_SETTINGS|Basisinstellingen email
+#LABEL_SMTP_SERVER|SMTP server
+#LABEL_EMAIL_FROM|Emailadres van
+#LABEL_EMAIL_TO|Emailadres naar
+#LABEL_EMAIL_NOTIFIC|Email berichtgeving
+#LABEL_SEND_TIME|Tijdstip voor verzenden
+#LABEL_MONDAY|ma
+#LABEL_TUESDAY|di
+#LABEL_WEDNESDAY|wo
+#LABEL_THURSDAY|do
+#LABEL_FRIDAY|vr
+#LABEL_SATURDAY|za
+#LABEL_SUNDAY|zo
+#LABEL_LAST_TRANS|Laatste verzending
+#LABEL_STATUS|Status
+#LABEL_START_TRANS|Testbericht verzenden
+
+// Dialog: SMS
+#TITEL_SMS|SMS berichtgeving configureren
+#LABEL_START_TESTSMS|SMS-testbericht verzenden?
+#LABEL_SMS_BASIC_SETTING|Basisinstellingen SMS
+#LABEL_KEYWORD_SUBJECT|Sleutelwoord referentietekst
+#LABEL_SMS_NOTIFIC|SMS berichtgeving
+#LABEL_YIELD_IN_SUBJECT|: Opbrengst in referentietekst
+
+// Dialog: Export
+#TITEL_EXPORT|Automatische export van gegevens configureren
+#LABEL_START_FTP|FTP-testoverdracht starten?
+#LABEL_START_CSV|CSV-gegevensexport starten?
+#LABEL_PLEASE_WAIT|..even geduld aub..
+#LABEL_DATA_EXPORT|Cyclische export gegevens
+#LABEL_FTP_SERVER|FTP server
+#LABEL_DIRECTORY|Pad
+#LABEL_UPDATE_INTERVAL|Interval actualisatie
+#LABEL_MINUTE_SHORT|m
+#LABEL_HOUR_SHORT|h
+#LABEL_DAILY|dag.
+#LABEL_DATAFORMAT|Data formaat
+#LABEL_CSV_FORMAT|CSV
+#LABEL_MANUAL_EXPORT|Manuele export
+#LABEL_CSV_FORMAT2|CVShuidige waarden
+#LABEL_CURRENT_VALUES|Momentanwerte
+#LABEL_MAX_30_DAYS|max. 30 dagen
+#LABEL_DAILY_VALUES|Tageswerte
+#LABEL_ALL_INV_INDIVID|alle WR afzonderlijk
+#LABEL_ALL_INV_SUM|alle WR samen
+
+// Dialog: Störung / Failure
+#TITEL_FAILURE|Berichtgeving bij storingen
+#LABEL_LIST_STATUS|Lijst van alle statuscodes:
+#LABEL_LIST_ERROR|Lijst van alle foutcodes:
+#LABEL_NUMBER|Nr
+#LABEL_ACTIVE|Aan
+#LABEL_ERROR|Fout
+#LABEL_FROM|Van
+#LABEL_CODE|code
+#LABEL_UNTIL|tot
+#LABEL_AFTER_N|Na x
+#LABEL_ACTIVATE_MEASURE|metingen uitvoeren
+#LABEL_MAX_EACH_DAY|Max. aantal per dag
+
+// Dialog: Backup
+#TITEL_BACKUP|Automatische / manuele back-up
+#LABEL_CONFIRM_BACKUP|Back-up laden?
+#LABEL_CONFIRM_IMPORT|Import starten? (alle aanwezige gegevens worden gewist)
+#LABEL_CONFIRM_SAVE_BACKUP|Back-up doorvoeren?
+#LABEL_BACKUP|Back-up
+#LABEL_AUTOMATICALLY|automatisch
+#LABEL_BACKUP_INTERVAL|Back-up interval
+#LABEL_DAILY2|Dagelijks
+#LABEL_WEEKLY|wekelijks
+#LABEL_MANUALLY|manueel
+#LABEL_SAVE_DATA_HD|Data opslaan op harde schijf
+#LABEL_CREATE|Voorbereiden
+#LABEL_LOAD_DATA_HD|Data ophalen van harde schijf
+#LABEL_LOAD|Laden
+#LABEL_DATA_CORRECTION|Correctie data
+#LABEL_DAILY_YIELD|Dagwaarde
+#LABEL_FOR_EXAMPLE|bv.
+#LABEL_ADJUST|Corrigeren
+#LABEL_DATA_IMPORT|Import data
+#LABEL_INITAL_INVENTORY|Aanvangsbestand met dagwaarden in CSV-formaat
+#LABEL_DATE_FORMAT|DD.MM.JJJJ
+#LABEL_DAY_YIELD_IN|Dagopbrengst in
+
+// Dialog: System
+#TITEL_SYSTEM|Beheer systeemconfiguratie
+#LABEL_CONFIRM_RESTORE_SYSTEM|Systeemconfiguratie laden?
+#LABEL_CONFIRM_RESET_SYSTEM|Systeemconfiguratie  herstellen?
+#LABEL_SYSTEM_BACKUP|Systeem back-up
+#LABEL_SAVE_SYSTEM_DATA_HD|Systeemconfiguratie op harde schijf bewaren
+#LABEL_RESTORE_SYSTEM_SETTINGS|Systeemconfiguratie ophalen van harde schijf
+#LABEL_SYSTEM_SETTINGS|Systeemconfiguratie
+#LABEL_CURRENT_SERIAL|Serienummer
+#LABEL_LICENCE_KEY|Licentienummer
+#LABEL_SAVE_INTERVAL|Interval voor opslaan
+#LABEL_MINUTE_SHORT2|min
+#LABEL_TIMEZONE|Tijdzone GMT
+#LABEL_CENTRAL_EUROPE|Midden Europa=+1
+#LABEL_DATE_TIME|datum / uur
+#LABEL_NEW|Nieuw
+
+// Dialog: Update
+#TITEL_UPDATE_FIRMWARE|Nieuwe firmware
+#LABEL_CONFIRM_FIRM_UPD1|Firmware update - Veiligheidsafvraag\n\nHeeft u een back-up genomen?
+#LABEL_CONFIRM_FIRM_UPD2|Heeft u een back-up genomen?
+#LABEL_CONFIRM_FIRM_UPD3|Firmware update downloaden?
+#LABEL_UPDATE_FIRMWARE|Firmware update
+#LABEL_DO_DATA_BACKUP0|Attention!
+#LABEL_DO_DATA_BACKUP1|Voordat u de firmware download, dient u
+#LABEL_DO_DATA_BACKUP2|eerst
+#LABEL_DO_DATA_BACKUP3|een back-up te nemen.
+#LABEL_UPDATE_INFO1|De recentste softwareversie voor
+#LABEL_UPDATE_INFO2|kan van
+#LABEL_UPDATE_INFO3|downloaden.
+#LABEL_UPDATE_INFO4|De firmware opslaan op de harde schijf en daarna selecteren. Gebruik hiervoor de toets “Bladeren”.
+#LABEL_UPDATE_INFO5|De update wordt uitgevoerd wanneer u “downloaden” selecteert. De downloadsessie niet onderbreken!
+#LABEL_CURRENT_FIRMWARE|Recentste firmware versie
+#LABEL_FIRMWARE_DATE_FROM|van
+#LABEL_LOAD2|Downloaden
+
+// Email / SMS / FTP
+#LABEL_SERVER_DOMAIN|solarlog-home.eu
+#LABEL_SERVER_USERNAME|gebruikersnaam
+#LABEL_SERVER_PASSWORD|paswoord
+#LABEL_SERVER_EMAIL1|gebruikersnaam@solarlog-home.eu
+#LABEL_SERVER_OWN_EMAIL|own_email_adress
+#LABEL_SERVER_SMS_SAMPLE|SMS0173...
+
+// Login
+#TITEL_LOGIN|Login for configuration area
+#LABEL_LOGIN|Login
+
+// System 2
+#LABEL_ADDITIONAL_PW|Additional paswoord?
+#LABEL_OLD_PW|Oud paswoord
+#LABEL_NEW_PW|Nieuw paswoord
+#LABEL_REPEAT_PW|Herhaal paswoord
+
+// ************ 19.02.2009 NEU
+// Dialog: System
+#LABEL_CHOOSE_LANG|Taal selecteren
+
+// Dialog: Anfangskonfiguration
+#LABEL_BEGIN_TITEL|Beginconfiguratie
+#MENU_START|Start
+#MENU_BEGIN|Beginconfig.
+#LABEL_CHOOSE_INV_B|Wisselrichters aan RS485/422-B
+#LABEL_PLEASE_CHOOSE|S.v.p. selecteren
+
+#LABEL_CONFIRM_RESET_FACTORY|Fabrieksinstellingen terugzetten
+#LABEL_RESET|Terugzetten
+
+// Dialog: Mainmenu
+#LABEL_MORE_INFO|Meer informatie
+#LABEL_NUM_INV|Aantal wisselrichters
+#LABEL_PLANT_SIZE|Grootte installatie
+#LABEL_SERIALNUM|Serienummer
+
+// Dialog: WR Sortierung
+#LABEL_SORT_TITEL|Wisselrichtervolgorde
+#LABEL_SORT_DESC1|De wisselrichters kunnen binnen dezelfde interface
+#LABEL_SORT_DESC2|(zelfde kleur) willekeurig worden gesorteerd.
+#LABEL_CURRENT|Momentaan
+#LABEL_SORT_POS|Pos.
+#MENU_SORT|WR-volgorde
+#LABEL_SORT_CONFIRM|Nieuwe wisselrichterposities opslaan?
+#LABEL_SORT_MISSING|Nog niet alle wisselrichters toegewezen.
+#LABEL_SORT_NOREORG|Gegevens ongewijzigd laten (bijv. bij WR-wisseling)
+#LABEL_SORT_REORG|Gegevens op nieuwe posities reorganiseren (bijv. bij uitbreidingen). Kan afhankelijk van gegevensvolume enige tijd duren.
+#LABEL_SORT_INIT|Alle gegevens verwijderen (aan te bevelen bij eerste installatie)
+#LABEL_SORT_RESTARTMSG|Let op: na het opslaan wordt het apparaat opnieuw gestart.
+
+// Dialog: Einspeisemanagement
+#LABEL_PM_TITEL|Voedingsmanagement
+#MENU_PM|Voedingsmgmt.
+#LABEL_PM_DESC1|De digitale ingangen en vermogensstappen kunnen op de
+#LABEL_PM_DESC2|eis v/h energiebedr. worden ingesteld.
+#LABEL_PM_RELAY|Relais
+// for Translater: "K1" means "Kanal1"
+#LABEL_PM_C1|K1
+#LABEL_PM_C2|K2
+#LABEL_PM_C3|K3
+#LABEL_PM_C4|K4
+#LABEL_PM_POWER|Vermogen in %<br>(max.nom.vermogen)
+#LABEL_PM_DIGI_IN|Dig. ingang
+#LABEL_PM_DIGI_1|D_IN_1
+#LABEL_PM_DIGI_2|D_IN_2
+#LABEL_PM_DIGI_3|D_IN_3
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_STEP1|Stap 1
+#LABEL_PM_STEP2|Stap 2
+#LABEL_PM_STEP3|Stap 3
+#LABEL_PM_STEP4|Stap 4
+#LABEL_PM_RELAIS|Relais sluiten bij stap 4
+#LABEL_PM_MONITORING|Bewaking en gegevensregistratie
+#LABEL_PM_INV|Regeling van de omvormers
+#LABEL_PM_INV_NOTE|Let op: functie is afhankelijk van gebruikte omvormers
+#LABEL_PM_RELAIS_CONF|Kanaal- en vermogensinstellingen
+#LABEL_PM_PWR_CHG|Om grote vermogenssprongen te voorkomen (bijv. voll. uitschakeling in zeer korte tijd), kan de max. vermogenswijz. per interval worden geconfigureerd. 1 interval bedraagt gewoonlijk 15 sec.
+#LABEL_PM_PWR_CHG_PROZ|max.wijz. vermogen
+#LABEL_PM_NETTING|Netwerk
+#LABEL_PM_NET_DESC1|De vermogensreductie kan in het netwerk aan max. 9 andere
+// "... SolarLog ..."
+#LABEL_PM_NET_DESC2|worden doorgegeven. Daartoe telkens IP-adres invoeren. Meer invoervelden worden automatisch geopend.
+#LABEL_PM_IPADRESS|IP-adres
+
+// Dialog: iSCB - "intelligent String Connection Box"
+#LABEL_CONFIG_SCB|iSCB configureren
+#LABEL_CONFIG_SCB|SCB configureren
+#LABEL_SCB_TITEL|iSCB
+#LABEL_SCB_TITEL|SCB
+#MENU_SCB|iSCB
+#MENU_SCB|SCB
+#LABEL_INGENERAL|Algemeen
+//#LABEL_INGENERAL|intelligent String Connection Box
+#LABEL_CHOOSE_TYP|Type iSCB kiezen
+#LABEL_CHOOSE_TYP|Type SCB kiezen
+#LABEL_ACT_AUTO_CALIBR|Automatische offsetkalibratie van de stroomingangen (indien donker)
+// for Translater: "um" means "um 17 Uhr"
+#LABEL_AT|om
+#LABEL_SCB_CONFIG|iSCB-configuratie
+#LABEL_SCB_CONFIG|SCB-configuratie
+#LABEL_CHOOSE|Keuze
+#LABEL_CONNECTED2|Aangesloten
+#LABEL_WORKING|in bedrijf
+#LABEL_ADRESS2|Adres
+#LABEL_QUANT_ANALOG|Aant. analoge ingangen (1-24)
+#LABEL_QUANT_DIGITAL|Aant. digitale ingangen (1-8)
+#LABEL_DEDICATED_INV|Toegewezen omvormers
+#LABEL_CHAN_CONFIG|Kanaalconfiguratie
+#LABEL_ANALOG|Anal.
+#LABEL_TYPE|Type
+#LABEL_POWER|Stroom
+#LABEL_OFFSET|Offset
+#LABEL_SLOPE|Stijging
+#LABEL_DIGITAL|Dig.
+#LABEL_ALARM|Alarm
+#LABEL_UNUSED|Ongebruikt
+#LABEL_UNASSIGNED|n. bezet
+
+// Dialog: Anfangskonfiguration - ab 5.12.09
+#LABEL_SMABT|SMA-Bluetooth
+#LABEL_SMABT_SERIAL|Serienr. omvormer
+
+// ab 24.12.09
+#LABEL_CURRENCY|Cent
+
+// Dialog: SCB_SIAC - ab 18.01.10
+#LABEL_QUANT_STRINGS_SIAC|Aantal strings (1-12)
+#LABEL_INTERFACE485|RS485-interface
+#LABEL_SIAC|SIAC
+#LABEL_STRING|String
+
+// Dialog: SCB Current Data
+#VISU_SCB|SCB-monitor
+#LABEL_SCB_NO_DATA|SCB inactief of geen gegevens
+#LABEL_DUPLICATE|Duplicaat
+
+// Dialog: PM  - ab 25.02.10
+#LABEL_PM_LOAD_MANAGE|Belastingsbeheer
+#LABEL_PM_LOAD_MAN_DESC|Vermogensreductie bij faseverschillen > 4,6 kW (alleen geldig voor eenfase-omv.)
+#LABEL_PM_WHICH_PHASE|Terugleveren op fase
+#LABEL_PM_WHICH_PHASE2|(=0 voor 3-fasen terugleveren)
+
+// Dialog: SCB_SMAX - ab 10.03.10
+#LABEL_QUANT_STRINGS_SMAX|Aantal strings (1-24)
+#LABEL_SMAX|SolarMax
+
+// Dialog: SCB_KNBX - ab 11.05.10
+#LABEL_QUANT_STRINGS_KNBX|Aantal strings (1-16)
+#LABEL_KNBX|Knubix
+
+// Email / FTP - Solar-Log WEB
+#LABEL_SERVER_FTP_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL_CLASSIC2|home.solarlog-web.eu
+#LABEL_SERVER_EMAIL1_CLASSIC2|gebruikersnaam@home.solarlog-web.eu
+#LABEL_SERVER_FTP_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL_FULL|solarlog-web.eu
+#LABEL_SERVER_EMAIL1_FULL|gebruikersnaam@solarlog-web.eu
+#LABEL_SERVER_FTP_SELF|eigen-domein.net
+#LABEL_SERVER_EMAIL_SELF|eigen-smtp-server
+#LABEL_SERVER_EMAIL1_SELF|gebruikersnaam@smtp.server
+
+// Dialog: Internet - 06.07.10
+#LABEL_SOLARLOG_WEB|Solar-Log WEB
+#LABEL_WEB_FULL|Full service
+#LABEL_WEB_CLASSIC2|Classic-2nd Edition
+#LABEL_WEB_SELF|Self Made
+#LABEL_WEB_CLASSIC1|Classic-1st Edition ('solarlog-home')
+
+// Dialog: Lan - 16.07.10
+#LABEL_SMS_DIRECT|SMS direct via modem
+
+// Dialog: Einspeisemanagement - 20.07.10
+#LABEL_PM_REACTIVE_POWER_CONTROL|Regeling blindvermogen
+#LABEL_PM_FIX_COS_PHI|vaste waarde cos(Phi)
+#LABEL_PM_FIX_REACTIVE_POWER|vast blindvermogen (VAr)
+#LABEL_PM_LINE_COS_PHI|variabele waarde cos(Phi) via lijn
+#LABEL_PM_LINE_REACTIVE_POWER|variabel blindvermogen via lijn
+#LABEL_PM_CONTR_COS_PHI|geregelde waarde cos(Phi) 
+#LABEL_PM_VAR|VAr
+#LABEL_PM_COS_PHI|Cos(Phi)
+#LABEL_PM_FROM|Van
+#LABEL_PM_TO|Tot
+#LABEL_PM_REACTIVE_POWER|Blindvermogen
+#LABEL_PM_ACTIVE_POWER|Werkelijk vermogen
+#LABEL_PM_P_PN|P/Pn
+#LABEL_PM_UNDER_EXCITED|naijlend
+#LABEL_PM_STEP|Stap
+#LABEL_PM_EXAMPLE_COS_LINE1|Voorbeeld hierboven:
+#LABEL_PM_EXAMPLE_COS_LINE2|Van P/Pn 0.20    Cos(Phi) 0.95 
+#LABEL_PM_EXAMPLE_COS_LINE3|Tot P/Pn 0.80    Cos(Phi) 0.95   naijlend
+#LABEL_PM_EXAMPLE_RAP_LINE1|Voorbeeld hierboven:
+#LABEL_PM_EXAMPLE_RAP_LINE2|Van werkelijk vermogen 2500 W blindvermogen 0 var 
+#LABEL_PM_EXAMPLE_RAP_LINE3|Tot werkelijk vermogen 5000 W blindvermogen 1400 var
+
+// Dialog: Wechselrichter - 02.08.10
+#LABEL_ACCESS_KEY|Autorisatiecodes
+#LABEL_ACCESS_KEY_I|Autorisatiecode I
+#LABEL_ACCESS_KEY_II|Autorisatiecode II
+#LABEL_ACCESS_KEY_III|Autorisatiecode III
+#LABEL_ACCESS_KEY_CUR|Algemene autorisatiecode
+#LABEL_DIGITAL_COUNTER_AVAIL|Elektrische teller bij S0-ingang
+#LABEL_ENERGY_METER_INV|Omvormermodus
+#LABEL_ENERGY_METER_YIELD|Totale-opbrengstmeter
+#LABEL_ENERGY_METER_USAGE|Verbruiksmeter
+#LABEL_MODULFIELD||Moduleveld (1-9)
+#LABEL_IMPULSFACTOR|Impulsfactor
+#LABEL_MPP1|MPP-tracker 1
+#LABEL_MPP2|MPP-tracker 2
+#LABEL_MPP3|MPP-tracker 3
+
+// Dialog: System - 07.10.10
+#LABEL_CHOOSE_COUNTRY|Selecteer land
+#LABEL_COUNTRY_LOAD|Activeren
+#LABEL_DST_SETTING|Zomertijd
+
+// Dialog: Wechselrichter - 11.10.10
+#LABEL_METER_ADDR_FEEDIN|Adres elektriciteits-/teruglevermeter
+#LABEL_METER_ADDR_PRODUCE|Adres productiemeter
+
+// Dialog: Anfangskonfiguration - 30.11.10
+#LABEL_CHOOSE_INV_E|Omvormers in netwerk (Ethernet)
+
+// Dialog: Powermanagement - 10.12.10
+#LABEL_HARDWARE_UPDATE|( Hardware-update noodzakelijk!!! )
+
+// Dialog: Wechselrichtertausch - 08.01.11
+#LABEL_EXCHANGE_TITEL|Uitwisseling omvormers
+#LABEL_EXCHANGE_DESC1|De omvormers kunnen binnen het interfacegebied worden uitgewisseld
+#LABEL_EXCHANGE_DESC2|(zelfde kleur).
+#MENU_EXCHANGE|Uitwisseling omvormer
+#LABEL_EXCHANGE_SCANNING|Identificatie opeenvolgende omvormers starten
+#LABEL_EXCHANGE_NO_MANUAL|Functie alleen beschikbaar als adressen niet op omvormer kunnen worden ingesteld
+
+// Dialog: SCB-Knubix - 18.02.11
+#LABEL_SENSORBOX|Sensorbox
+#LABEL_SENSOR_OUTSIDE_TEMP|Sensor voor buitentemperatuur aangesloten
+#LABEL_SENSOR_WIND|Windsensor aangesloten
+
+// Dialog: WLAN-Konfiguration - 08.01.11
+#LABEL_WLAN_TITEL|WLAN
+#LABEL_WLAN_SELECT|Netwerk kiezen
+#LABEL_WLAN_SECURITY|Beveiligingsinstellingen
+#LABEL_WLAN_IPSETTINGS|IP-instellingen
+#LABEL_WLAN_KEY|Netwerkcode
+#MENU_WLAN|WLAN
+#LABEL_WLAN_SCANNING|Draadloze netwerken zoeken
+#LABEL_WLAN_AUTOMATIC|automatisch vaststellen
+#LABEL_WLAN_NAME|Netwerknaam (SSID)
+#LABEL_WLAN_ENCRYPTION|Beveiligingstype
+#LABEL_WLAN_CONNECTED|Verbonden
+#LABEL_WLAN_DISCONNECTED|Niet verbonden
+#LABEL_WLAN_DISABLED|Uitgeschakeld
+#LABEL_WLAN_SLERROR|SL Offline
+#LABEL_WLAN_INITIALIZING|Bezig met initialiseren
+
+
+// Dialog: Mainmenu - 12.04.11
+#LABEL_NUM_METER|Digitale meters
+#LABEL_NUM_SENSOR|Sensoren

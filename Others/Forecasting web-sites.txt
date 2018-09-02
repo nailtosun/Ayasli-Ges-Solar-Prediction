@@ -1,0 +1,23 @@
+https://doc.forecast.solar/doku.php?id=api:estimate //forecast api //needed prof account for full prediction still can be
+reference
+
+apikey - personal API key for registered users
+lat - latitude of location, -90 (south) … 90 (north)
+lon - longitude of location, -180 (west) … 180 (east)
+dec - plane declination, 0 (horizontal) … 90 (vertical)
+az - plane azimuth, -180 … 180 (-180 = north, -90 = east, 0 = south, 90 = west, 180 = north)
+kwp - installed modules power in kilo watt
+
+
+Secret-Key
+https://api.darksky.net/forecast/9809955754b96208cf384a5e707f9e06/36.8901,32.7894 //Cloud Data
+Cloud cover!
+
+3 day forecast
+ftp://ftp.swpc.noaa.gov/pub/forecasts/three_day/  //For comparing our work
+
+http://re.jrc.ec.europa.eu/pvg_static/methods.html  //Good for read
+
+https://nsrdb.nrel.gov/api-instructions //solar databases //API key for solar radiation data
+
+http://re.jrc.ec.europa.eu/pvg_static/en/manual.html

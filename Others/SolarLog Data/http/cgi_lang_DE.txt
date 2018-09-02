@@ -1,0 +1,626 @@
+// language bundle for internal cgi-bases web pages
+// Firmware: V1.0.0-18
+// Date    : 25.04.2008
+// Language: deutsch
+//
+// Anmerkungen:
+// 1. Die Übersetzung sollte möglichst weniger oder gleich viel Zeichen belegen als der Originaltext
+// 2. Umlaute und Sonderzeichen sollten als HTML-Code geschrieben werden:
+//      Zeichen   Ersetzung
+//          ä   &auml;
+//          Ä   &Auml;
+//          ö   &ouml;
+//          Ö   &Ouml;
+//          ü   &uuml;
+//          Ü   &Uuml;
+//          ß   &szlig;
+
+// Menu structure
+#VISU_PC|Visualisierung PC
+#VISU_PDA|PDA / PocketPC
+#MENU_YIELD_DATA|Ertragsdaten
+#MENU_DIAGNOSIS|Diagnose
+#MENU_CONFIGURATION|Konfiguration
+#MENU_LAN|Lan
+#MENU_GROUPS|Anlagengruppen
+#MENU_INVERTER|Wechselrichter
+#MENU_FORECAST|Prognose
+#MENU_GRAPHICS|Grafik
+#MENU_BASIC|Basis
+#MENU_EXPERT|Erweitert
+#MENU_INTERNAL|Intern
+#MENU_INTERNET|Internet
+#MENU_EMAIL|Email
+#MENU_SMS|SMS
+#MENU_EXPORT|WEB-Export
+#MENU_FAILURE|St&ouml;rung
+#MENU_BACKUP|Backup
+#MENU_SYSTEM|System
+#MENU_UPDATE|Update
+
+
+// Haupt-Dialog / Main menu
+#INDEX_TITLE|Hauptmen&uuml;
+#NO_YIELD_DATA|Noch keine Ertragsdaten verfügbar.
+#LABEL_WELCOME|Willkommen im Hauptmen&uuml; des
+#LABEL_FIRMWARE|Firmware
+#MSG_READING_SYSTIME|Systemzeit wird noch gelesen...
+#LABEL_NO_INVERTERS|Wechselrichter noch unbekannt, noch keine Ertragsdaten vorhanden
+#LABEL_INVERTERS_RECOG|Wechselrichter erkannt
+#LABEL_MENU_NAVIG|&Uuml;ber das Men&uuml; oben und auf der linken Seite k&ouml;nnen die weiteren<br> Funktionen aufgerufen werden.
+#LABEL_LOGGING_DATA|zeichnet momentan Daten auf.
+
+// Ereignisprotokoll / events protocol
+#LABEL_EVENTPROT|Ereignisprotokoll
+#LABEL_DEGRADATION|Degradation
+
+// Dialog: Degradation
+#LABEL_DEGRAD_TITEL|Berechnung der Leistungsabnahme (Degradation)
+#LABEL_TOP|Top
+#LABEL_MAXVAL|MaxWert
+#LABEL_DATE|Datum
+#LABEL_SPREIZUNG|Spreizung
+#LABEL_BENCHMARK|Bewertung
+#LABEL_HIT|Treffer
+#LABEL_AVRG_MAX|Durchschn.Max
+#LABEL_DEGRAD_INFO1|Berechnung der j&auml;hrlichen Leistungsabnahme (Degradation) der Solaranlage
+#LABEL_DEGRAD_INFO2|Dazu wird f&uuml;r jedes Jahr der "durchschnittliche Tagesmaximumwert" berechnet.<br>
+#LABEL_DEGRAD_INFO3|Dieser berechnet sich aus den tats&auml;chlichen Maximalwerten und einer statistischen
+#LABEL_DEGRAD_INFO4| Angleichung, um extreme Spitzen auszufiltern. Der Vergleich dieser berechneten Maximumwerte
+#LABEL_DEGRAD_INFO5| erlaubt einen R&uuml;ckschluss auf die Leistung der Anlage.<br>
+#LABEL_DEGRAD_INFO6| Voraussetzungen f&uuml;r ein Datenvergleich sind gen&uuml;gend Datens&auml;tze pro Jahr und
+#LABEL_DEGRAD_INFO7| identische Anlagentechnik.
+#LABEL_ANALYSIS_1YEAR|Datenauswertung für das Jahr
+#LABEL_ANALYSIS_XYEARS|Datenauswertung über die Jahre
+#LABEL_UNTIL|bis
+#LABEL_YEAR|Jahr
+#LABEL_NOT_ENOUGH_DATA|Zu wenig Daten für eine Auswertung
+#LABEL_DEGRAD_INFO1B|Ausgehend vom aktuellen Datensatz werden nach oben und unten jeweils
+#LABEL_DEGRAD_INFO2B| die S&auml;tze mit maximal 10% Abweichung gez&auml;hlt. Weitere Informationen im Handbuch.
+#LABEL_DEGRAD_TAB|Degradationstabelle
+#LABEL_AVRG_DAYMAX|Durchschn.Tagesmax
+#LABEL_DECREASE|Abnahme
+
+// Dialog: Lan
+#LABEL_LAN_TITEL|Netzwerkeinstellungen
+#LABEL_LAN_SETTINGS|Netzwerkeinstellungen
+#LABEL_IP_ADR|IP Adresse
+#LABEL_SUBNET|Subnet Maske
+#LABEL_INTERNET_ACCESS|Internetzugang
+#LABEL_NO_INTERNET|Kein Internet
+#LABEL_ANALOG_MODEM|Analog-Modem
+#LABEL_GPRS_MODEM|GPRS-Modem
+#LABEL_GPRS_MODEM_INTERN|GPRS-Modem (Intern)
+#LABEL_ROUTER|Netzwerk-Router
+#LABEL_ROUTER2|(DSL, Kabel, WLan)
+#LABEL_GATEWAY|Gateway
+#LABEL_DNS_SERVER|extra DNS-Server
+#LABEL_MODEM_PACK|-Modem-Paket
+#LABEL_I-BY-CALL|Internet-By-Call Nr.
+#LABEL_USERNAME|Benutzername
+#LABEL_PASSWORD|Passwort
+#LABEL_DIAL0|"0" vorw&auml;hlen
+#LABEL_NO_DIALTONE|W&auml;hlton aus
+#LABEL_ALLOW_DIALIN|Einwahl erlauben
+#LABEL_DIALIN_PW|Einwahl-Passwort
+#LABEL_GPRS_PACK|-Mobilfunk-Paket
+#LABEL_CHOOSE_GPRS_PROV|Mobilfunk-Provider ausw&auml;hlen
+#LABEL_SIM_PIN|SIM-PIN
+#LABEL_LAN_REBOOT|wird nach dem Speichern neu gestartet.
+#LABEL_DHCP|automatisch beziehen (DHCP)
+#LABEL_CONN_TIME|Verbindungsdauer
+#LABEL_KEEP_ONLINE|Ständig Online bleiben (nur Fest-IP Tarife)
+
+// Dialog: Anlagengruppen
+#LABEL_GROUPS|Anlagengruppen
+#LABEL_ADD_INV|WR zufügen
+#LABEL_ALL_INV_ADDED|Alle Wechselrichter bereits zugeordnet.
+#LABEL_ADRESS|Adr
+#LABEL_SERIALNR|S/N
+#LABEL_REMOVE_INV|WR entfernen
+#LABEL_NO_INV|Keine Wechselrichterzuordnung vorhanden.
+#LABEL_NO_GROUPS|Alle Wechselrichter geh&ouml;ren zu 1 Anlage
+#LABEL_GROUPS_ON|Die WR werden in Anlagengruppen aufgeteilt
+#LABEL_GROUP_DEF|Gruppendefinition
+#LABEL_DESC|Bezeichnung
+#LABEL_MAX_INV|WR (max.15)
+#LABEL_ADD|Zuf&uuml;gen
+#LABEL_DEL|Entfernen
+#LABEL_SAVE|Speichern
+#LABEL_CANCEL|Abbrechen
+
+// Dialog: Wechselrichter / Inverter
+#LABEL_CONFIG_INV|Wechselrichterdaten konfigurieren
+#LABEL_INV|Wechselrichter
+#LABEL_INV_SHORT|WR
+#LABEL_NUMBER|Nummer
+#LABEL_NEW_NUMBER|Neue Nummer
+#LABEL_DEVICE_NAME|Ger&auml;tebezeichnung
+#LABEL_ADR_SN|Adresse/Seriennummer
+#LABEL_INST_DC_POWER|Angeschlossene Generatorleistung
+#LABEL_PAC_CORR_FACTOR|Pac Korrekturfaktor
+#LABEL_CORR_FACT_INFO|Stromz&auml;hler / WR-Z&auml;hler * 1000
+#LABEL_IMPULSFACTOR|Impulsfaktor
+#LABEL_PER_KWH|je kWh
+#LABEL_MODUL|Modul
+#LABEL_FIELD|Feld
+#LABEL_CONNECTED|Angeschlossene
+#LABEL_DC_POWER|Generator Leistung
+#LABEL_STRING1|String 1
+#LABEL_STRING2|String 2
+#LABEL_STRING3|String 3
+#LABEL_MONITORING|&Uuml;berwachung
+#LABEL_MONI_INFO|Erkennt Wechselrichter-Ausfall und Leistungsabweichung des Generators
+#LABEL_ACTIVATED|Aktiviert
+#LABEL_DEACTIVATED|Deaktiviert
+#LABEL_NO_SHADOW|Überwachungszeitraum (ohne Verschattung auch im Winter) von
+#LABEL_CLOCK|Uhr
+#LABEL_MIN_POWER|Min.Einspeiseleistung
+#LABEL_OF_DC_POWER|der Generatorleistung
+#LABEL_MSG_AS_EMAIL|Meldung als Email
+#LABEL_SMS|SMS
+#LABEL_DIFF|Abweichung
+#LABEL_PERIOD_ERR|und St&ouml;rdauer von
+#LABEL_MINUTE|min.
+#LABEL_MAXIMUM|Maximal
+#LABEL_MAX_MSG_DAY|Meldungen pro Tag versenden
+#LABEL_IS_SNOW|Muss mit dauerhafter Schneebedeckung gerechnet werden?
+#LABEL_YES|Ja
+#LABEL_NO|Nein
+#LABEL_SCALE|Grafik - Skalierung
+#LABEL_DEFINITION|Definition
+#LABEL_YSCALE|Y-Skalierung
+#LABEL_VIEW_FOR|Ansicht f&uuml;r
+#LABEL_DAY|Tag
+#LABEL_MONTH|Monat
+#LABEL_YEAR|Jahr
+#LABEL_ALLYEARS|Alle Jahre
+#LABEL_MAX_YSCALE|Max.Y-Achse
+
+// Dialog: Prognose
+#LABEL_DEFINE_FORECAST|Prognosedaten der Solaranlage definieren
+#LABEL_SITE_DATA|Anlagendaten
+#LABEL_SITE_SIZE|Anlagengr&ouml;&szlig;e
+#LABEL_SUBSIDARY|Einspeiseverg&uuml;tung
+#LABEL_TARGET_CURRENT|Soll / Ist - Berechnung
+#LABEL_YEARLY_TARGET|Jahressoll
+#LABEL_MONTHLY_PORTIONS|Monatsanteile
+#LABEL_IN_TOTAL|insges.
+#LABEL_JAN|Jan
+#LABEL_FEB|Feb
+#LABEL_MAR|M&auml;r
+#LABEL_APR|Apr
+#LABEL_MAY|Mai
+#LABEL_JUN|Jun
+#LABEL_JUL|Jul
+#LABEL_AUG|Aug
+#LABEL_SEP|Sep
+#LABEL_OCT|Okt
+#LABEL_NOV|Nov
+#LABEL_DEC|Dez
+
+// Dialog: Grafik
+#LABEL_CONFIG_GRAPHICS|Datenvisualisierung konfigurieren
+#LABEL_VISUAL|Visualisierung
+#LABEL_XSCALE|X-Skalierung
+#LABEL_START_DAY|Tagesbeginn
+#LABEL_TIME_IN|Uhrzeit in
+#LABEL_HOUR|Std.
+#LABEL_END_DAY|Tagesende
+
+// Dialog: Internet
+#LABEL_TITEL_INTERNET|Anlageninformationen f&uuml;r Homepage und Banner
+#LABEL_HOMEPAGE|Homepage
+#LABEL_TITEL|&Uuml;berschrift
+#LABEL_OPERATOR|Betreiber
+#LABEL_LOCATION|Standort
+#LABEL_MODULS|Module
+#LABEL_INST_POWER|Leistung
+#LABEL_START_OPERATION|Inbetriebnahme
+#LABEL_ORIENTATION|Ausrichtung
+#LABEL_VISABLE_ON_HP|Auf Homepage sichtbar
+#LABEL_BANNER|Banner
+#LABEL_LINE1|Zeile 1
+#LABEL_LINE2|Zeile 2
+#LABEL_LINE3|Zeile 3
+#LABEL_LINK_HP|Link auf Homepage
+
+#LABEL_TITEL_TXT|[Anlagenbezeichnung]
+#LABEL_OPERATOR_TXT|[Betreibername]
+#LABEL_EMAIL_TXT|[Kontakt-Emailadresse]
+#LABEL_LOCATION_TXT|[Standort der Anlage]
+#LABEL_MODULS_TXT|[Beschreibung der Module und Hersteller]
+#LABEL_INVERTER_TXT|[Wechselrichterbezeichnung und Hersteller]
+#LABEL_INST_POWER_TXT|[Größe der Anlage] kWp
+#LABEL_START_OPERATION_TXT|[Installationsdatum]
+#LABEL_ORIENTATION_TXT|[Modulneigung und Ausrichtung]
+#LABEL_LINE1_TXT|[Kurzbez.Anlage]
+#LABEL_LINE2_TXT|4,5 kWp in 99999 Musterort
+#LABEL_LINE3_TXT|im Netz seit Januar 2008
+#LABEL_LINK_HP_TXT|www.solarlog-home.de/benutzer
+
+// Dialog: Email
+#TITEL_EMAIL|Email Benachrichtung konfigurieren
+#LABEL_START_TESTMAIL|Email-Testübertragung wirklich starten?
+#LABEL_EMAIL_SETTINGS|Email Grundeinstellung
+#LABEL_SMTP_SERVER|SMTP Server
+#LABEL_EMAIL_FROM|Email-Adresse Von
+#LABEL_EMAIL_TO|Email-Adresse Nach
+#LABEL_EMAIL_NOTIFIC|Email Benachrichtigung
+#LABEL_SEND_TIME|Versandzeit
+#LABEL_MONDAY|Mo
+#LABEL_TUESDAY|Di
+#LABEL_WEDNESDAY|Mi
+#LABEL_THURSDAY|Do
+#LABEL_FRIDAY|Fr
+#LABEL_SATURDAY|Sa
+#LABEL_SUNDAY|So
+#LABEL_LAST_TRANS|Letzte &Uuml;bertragung
+#LABEL_STATUS|Status
+#LABEL_START_TRANS|Test&uuml;bertragung starten
+
+// Dialog: SMS
+#TITEL_SMS|SMS Benachrichtung konfigurieren
+#LABEL_START_TESTSMS|SMS-Testübertragung wirklich starten?
+#LABEL_SMS_BASIC_SETTING|SMS Grundeinstellungen
+#LABEL_KEYWORD_SUBJECT|Schl&uuml;sselwort Betreffzeile
+#LABEL_SMS_NOTIFIC|SMS Benachrichtigung
+#LABEL_YIELD_IN_SUBJECT|Ertrag in Betreffzeile
+
+// Dialog: Export
+#TITEL_EXPORT|Automatischen Datenexport konfigurieren
+#LABEL_START_FTP|FTP-Testübertragung wirklich starten?
+#LABEL_START_CSV|CSV-Datenexport wirklich starten?
+#LABEL_PLEASE_WAIT|..Bitte warten..
+#LABEL_DATA_EXPORT|Zyklischer Datenexport
+#LABEL_FTP_SERVER|FTP Server
+#LABEL_DIRECTORY|Verzeichnis
+#LABEL_UPDATE_INTERVAL|Intervall Aktualisierung
+#LABEL_MINUTE_SHORT|m
+#LABEL_HOUR_SHORT|h
+#LABEL_DAILY|t&auml;gl.
+#LABEL_DATAFORMAT|Datenformat
+#LABEL_CSV_FORMAT|CSV
+#LABEL_MANUAL_EXPORT|Manueller Datenexport
+#LABEL_CSV_FORMAT2|CSV-Format
+#LABEL_CURRENT_VALUES|Momentanwerte
+#LABEL_MAX_30_DAYS|max. 30 Tage
+#LABEL_DAILY_VALUES|Tageswerte
+#LABEL_ALL_INV_INDIVID|alle WR einzeln
+#LABEL_ALL_INV_SUM|alle WR summiert
+
+// Dialog: Störung / Failure
+#TITEL_FAILURE|Benachrichtung bei St&ouml;rungen
+#LABEL_LIST_STATUS|Liste aller Status-Codes:
+#LABEL_LIST_ERROR|Liste aller Fehler-Codes:
+#LABEL_NUMBER|NR
+#LABEL_ACTIVE|Aktiv
+#LABEL_ERROR|Fehler
+#LABEL_FROM|Von
+#LABEL_CODE|Code
+#LABEL_UNTIL|Bis
+#LABEL_AFTER_N|Nach x
+#LABEL_ACTIVATE_MEASURE|Messungen aktivieren
+#LABEL_MAX_EACH_DAY|Max. Anzahl je Tag
+
+// Dialog: Backup
+#TITEL_BACKUP|Datensicherung automatisch/manuell
+#LABEL_CONFIRM_BACKUP|Datensicherung wirklich laden?
+#LABEL_CONFIRM_IMPORT|Datenimport wirklich starten? (Alle vorhandenen Daten werden gelöscht)
+#LABEL_CONFIRM_SAVE_BACKUP|Datensicherung wirklich erstellen?
+#LABEL_BACKUP|Datensicherung
+#LABEL_AUTOMATICALLY|automatisch
+#LABEL_BACKUP_INTERVAL|Datensicherungsintervall
+#LABEL_DAILY2|t&auml;glich
+#LABEL_WEEKLY|w&ouml;chentlich
+#LABEL_MANUALLY|manuell
+#LABEL_SAVE_DATA_HD|Daten auf Festplatte speichern
+#LABEL_CREATE|Aufbereiten
+#LABEL_LOAD_DATA_HD|Daten von Festplatte laden
+#LABEL_LOAD|Laden
+#LABEL_DATA_CORRECTION|Datenkorrektur
+#LABEL_DAILY_YIELD|Tageswert
+#LABEL_FOR_EXAMPLE|z.B.
+#LABEL_ADJUST|Korrigieren
+#LABEL_DATA_IMPORT|Datenimport
+#LABEL_INITAL_INVENTORY|Anfangsbestand aus Tagesdaten im CSV-Format
+#LABEL_DATE_FORMAT|TT.MM.JJJJ
+#LABEL_DAY_YIELD_IN|Tagesertrag in
+
+// Dialog: System
+#TITEL_SYSTEM|Systemeinstellungen verwalten
+#LABEL_CONFIRM_RESTORE_SYSTEM|Systemeinstellungen wirklich laden?
+#LABEL_CONFIRM_RESET_SYSTEM|Systemeinstellungen wirklich zurücksetzen?
+#LABEL_SYSTEM_BACKUP|Systemsicherung
+#LABEL_SAVE_SYSTEM_DATA_HD|Systemeinstellungen auf Festplatte speichern
+#LABEL_RESTORE_SYSTEM_SETTINGS|Systemeinstellungen von Festplatte laden
+#LABEL_SYSTEM_SETTINGS|Systemeinstellungen
+#LABEL_CURRENT_SERIAL|Aktuelle Seriennummer
+#LABEL_LICENCE_KEY|Lizenzschl&uuml;ssel
+#LABEL_SAVE_INTERVAL|Speicherintervall
+#LABEL_MINUTE_SHORT2|min
+#LABEL_TIMEZONE|Zeitzone GMT
+#LABEL_CENTRAL_EUROPE|Mitteleuropa=+1
+#LABEL_DATE_TIME|Datum / Uhrzeit
+#LABEL_NEW|Neu
+
+// Dialog: Update
+#TITEL_UPDATE_FIRMWARE|Firmware aktualisieren
+#LABEL_CONFIRM_FIRM_UPD1|Firmware-Update - Sicherheitsabfrage\n\nHaben Sie eine Systemsicherung durchgeführt?
+#LABEL_CONFIRM_FIRM_UPD2|Haben Sie ebenso eine Datensicherung durchgeführt?
+#LABEL_CONFIRM_FIRM_UPD3|Wollen Sie wirklich das Firmware-Update einspielen?
+#LABEL_UPDATE_FIRMWARE|Firmware aktualisieren
+#LABEL_DO_DATA_BACKUP0|Achtung!
+#LABEL_DO_DATA_BACKUP1|Unbedingt eine Datensicherung vornehmen
+#LABEL_DO_DATA_BACKUP2|bevor
+#LABEL_DO_DATA_BACKUP3|ein Firmware-Update eingespielt wird!
+#LABEL_UPDATE_INFO1|Die aktuelle Softwareversion f&uuml;r den
+#LABEL_UPDATE_INFO2|kann von
+#LABEL_UPDATE_INFO3|geladen werden.
+#LABEL_UPDATE_INFO4|Die Firmware-Datei auf der Festplatte abspeichern und mit untenstehendem Durchsuchen-Knopf ausw&auml;hlen.
+#LABEL_UPDATE_INFO5|Das Update wird durchgef&uuml;hrt wenn auf 'Einspielen' gedr&uuml;ckt wird. Der Einspielvorgang darf nicht unterbrochen werden!
+#LABEL_CURRENT_FIRMWARE|Aktuelle Firmware-Version
+#LABEL_FIRMWARE_DATE_FROM|vom
+#LABEL_LOAD2|Einspielen
+
+// Email / SMS / FTP
+#LABEL_SERVER_DOMAIN|solarlog-home.de
+#LABEL_SERVER_USERNAME|benutzername
+#LABEL_SERVER_PASSWORD|passwort
+#LABEL_SERVER_EMAIL1|benutzername@solarlog-home.de
+#LABEL_SERVER_OWN_EMAIL|eigene_email_adresse
+#LABEL_SERVER_SMS_SAMPLE|SMS0173...
+
+// Login
+#TITEL_LOGIN|Login für Konfigurationsbereich
+#LABEL_LOGIN|Login
+
+// System 2
+#LABEL_ADDITIONAL_PW|Zusätzliche Passwortabfrage?
+#LABEL_OLD_PW|Altes Passwort
+#LABEL_NEW_PW|Neues Passwort
+#LABEL_REPEAT_PW|Passwort wiederholen
+
+// ************ 19.02.2009 NEU
+// Dialog: System
+#LABEL_CHOOSE_LANG|Sprache wählen
+
+// Dialog: Anfangskonfiguration
+#LABEL_BEGIN_TITEL|Anfangskonfiguration
+#MENU_START|Start
+#MENU_BEGIN|Anfangskonfig.
+#LABEL_CHOOSE_INV_B|Wechselrichter an RS485/422-B
+#LABEL_PLEASE_CHOOSE|Bitte auswählen
+
+#LABEL_CONFIRM_RESET_FACTORY|Auf Werkseinstellungen zurücksetzen
+#LABEL_RESET|Zurücksetzen
+
+// Dialog: Mainmenu
+#LABEL_MORE_INFO|Weitere Informationen
+#LABEL_NUM_INV|Anzahl Wechselrichter
+#LABEL_PLANT_SIZE|Anlagengröße
+#LABEL_SERIALNUM|Seriennummer
+
+// Dialog: WR Sortierung
+#LABEL_SORT_TITEL|Wechselrichterreihenfolge
+#LABEL_SORT_DESC1|Die Wechselrichter können innerhalb des Schnittstellen
+#LABEL_SORT_DESC2|bereichs (gleiche Farbe) beliebig umsortiert werden.
+#LABEL_CURRENT|Momentan
+#LABEL_SORT_POS|Pos.
+#MENU_SORT|WR-Reihenfolge
+#LABEL_SORT_CONFIRM|Neue Wechselrichter-Positionen speichern?
+#LABEL_SORT_MISSING|Noch nicht alle Wechselrichter zugewiesen.
+#LABEL_SORT_NOREORG|Daten unverändert lassen (z.B. bei WR-Tausch)
+#LABEL_SORT_REORG|Daten auf neue Positionen reorganisieren (z.B. bei Erweiterungen). Kann je nach Datenvolumen einige Zeit dauern.
+#LABEL_SORT_INIT|Alle Daten löschen (Empfohlen bei Ersteinrichtung)
+#LABEL_SORT_RESTARTMSG|Hinweis: Nach dem Speichern wird das Gerät neu gestartet.
+
+// Dialog: Einspeisemanagement
+#LABEL_PM_TITEL|Einspeisemanagement
+#MENU_PM|Einspeisemgmt.
+#LABEL_PM_DESC1|Die Digitaleingänge und Leistungsstufen können je nach
+#LABEL_PM_DESC2|Anforderung der EVU eingestellt werden.
+#LABEL_PM_RELAY|Relais
+// for Translater: "K1" means "Kanal1"
+#LABEL_PM_C1|K1
+#LABEL_PM_C2|K2
+#LABEL_PM_C3|K3
+#LABEL_PM_C4|K4
+#LABEL_PM_POWER|Leistung in %<br>(max.Nennleistung)
+#LABEL_PM_DIGI_IN|Digitaleingang
+#LABEL_PM_DIGI_1|D_IN_1
+#LABEL_PM_DIGI_2|D_IN_2
+#LABEL_PM_DIGI_3|D_IN_3
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_DIGI_4|D_IN_4
+#LABEL_PM_STEP1|Stufe 1
+#LABEL_PM_STEP2|Stufe 2
+#LABEL_PM_STEP3|Stufe 3
+#LABEL_PM_STEP4|Stufe 4
+#LABEL_PM_RELAIS|Relais schließen bei Stufe 4
+#LABEL_PM_MONITORING|Überwachung und Protokollierung
+#LABEL_PM_INV|Regelung der Wechselrichter
+#LABEL_PM_INV_NOTE|Hinweis: Funktion ist abhängig vom verwendeten Wechselrichter
+#LABEL_PM_RELAIS_CONF|Kanal- und Leistungseinstellungen
+#LABEL_PM_PWR_CHG|Um große Leistungssprünge zu vermeiden (z.B. Voll-Abschaltung in kürzester Zeit), kann die max.Änderung der Leistung je Intervall konfiguriert werden. 1 Intervall beträgt normalerweise 15 Sek.
+#LABEL_PM_PWR_CHG_PROZ|max.Änderung Leistung
+#LABEL_PM_NETTING|Vernetzung
+#LABEL_PM_NET_DESC1|Die Leistungsreduzierung kann im Netzwerk an bis zu 9 andere
+// "... SolarLog ..."
+#LABEL_PM_NET_DESC2|weitergereicht werden. Dazu jeweils die IP-Adresse eingeben. Weitere Eingabefelder werden automatisch geöffnet.
+#LABEL_PM_IPADRESS|IP-Adresse
+
+// Dialog: iSCB - "intelligent String Connection Box"
+#LABEL_CONFIG_SCB|iSCB konfigurieren
+#LABEL_CONFIG_SCB|SCB konfigurieren
+#LABEL_SCB_TITEL|iSCB
+#LABEL_SCB_TITEL|SCB
+#MENU_SCB|iSCB
+#MENU_SCB|SCB
+#LABEL_INGENERAL|Allgemein
+//#LABEL_INGENERAL|intelligent String Connection Box
+#LABEL_CHOOSE_TYP|iSCB Typ auswählen
+#LABEL_CHOOSE_TYP|SCB Typ auswählen
+#LABEL_ACT_AUTO_CALIBR|Automatische Offset-Kalibrierung der Strom-Eingänge (bei Dunkelheit)
+// for Translater: "um" means "um 17 Uhr"
+#LABEL_AT|um
+#LABEL_SCB_CONFIG|iSCB Konfiguration
+#LABEL_SCB_CONFIG|SCB Konfiguration
+#LABEL_CHOOSE|Auswahl
+#LABEL_CONNECTED2|Angeschlossen
+#LABEL_WORKING|in Betrieb
+#LABEL_ADRESS2|Adresse
+#LABEL_QUANT_ANALOG|Anzahl Analog-Eingänge (1-24)
+#LABEL_QUANT_DIGITAL|Anzahl Digital-Eingänge (1-8)
+#LABEL_DEDICATED_INV|Zugeordneter Wechselrichter
+#LABEL_CHAN_CONFIG|Kanal Konfiguration
+#LABEL_ANALOG|Analog
+#LABEL_TYPE|Typ
+#LABEL_POWER|Strom
+#LABEL_OFFSET|Offset
+#LABEL_SLOPE|Steigung
+#LABEL_DIGITAL|Digital
+#LABEL_ALARM|Alarm
+#LABEL_UNUSED|Unbenutzt
+#LABEL_UNASSIGNED|Unbelegt
+
+// Dialog: Anfangskonfiguration - ab 5.12.09
+#LABEL_SMABT|SMA-Bluetooth
+#LABEL_SMABT_SERIAL|Seriennummer des WR
+// ab 24.12.09
+#LABEL_CURRENCY|Cent
+
+// Dialog: SCB_SIAC - ab 18.01.10
+#LABEL_QUANT_STRINGS_SIAC|Anzahl Strings (1-12)
+#LABEL_INTERFACE485|RS485-Schnittstelle
+#LABEL_SIAC|SIAC
+#LABEL_STRING|String
+
+// Dialog: SCB Current Data
+#VISU_SCB|SCB Monitor
+#LABEL_SCB_NO_DATA|SCB inaktiv oder noch keine Daten
+#LABEL_DUPLICATE|Duplizieren
+
+// Dialog: PM  - ab 25.02.10
+#LABEL_PM_LOAD_MANAGE|Lastmanagement (Testphase)
+#LABEL_PM_LOAD_MAN_DESC|Leistungsreduzierung bei Phasendifferenz > 4.6kW (nur für 1-phasige WR)
+#LABEL_PM_WHICH_PHASE|Einspeisung auf Phase
+#LABEL_PM_WHICH_PHASE2|(=0 bei 3-phasiger Einspeisung)
+
+// Dialog: SCB_SMAX - ab 10.03.10
+#LABEL_QUANT_STRINGS_SMAX|Anzahl Strings (1-24)
+#LABEL_SMAX|SolarMax
+
+// Dialog: SCB_KNBX - ab 11.05.10
+#LABEL_QUANT_STRINGS_KNBX|Anzahl Strings (1-16)
+#LABEL_KNBX|Knubix
+
+// Email / FTP - Solar-Log WEB - 06.07.10
+#LABEL_SERVER_FTP_CLASSIC2|home.solarlog-web.de
+#LABEL_SERVER_EMAIL_CLASSIC2|home.solarlog-web.de
+#LABEL_SERVER_EMAIL1_CLASSIC2|benutzername@home.solarlog-web.de
+#LABEL_SERVER_FTP_FULL|solarlog-web.de
+#LABEL_SERVER_EMAIL_FULL|solarlog-web.de
+#LABEL_SERVER_EMAIL1_FULL|benutzername@solarlog-web.de
+#LABEL_SERVER_FTP_SELF|eigene-domain.net
+#LABEL_SERVER_EMAIL_SELF|eigener-smtp-server
+#LABEL_SERVER_EMAIL1_SELF|benutzername@smtp.server
+
+// Dialog: Internet - 06.07.10
+#LABEL_SOLARLOG_WEB|Solar-Log WEB
+#LABEL_WEB_FULL|Full Service
+#LABEL_WEB_CLASSIC2|Classic-2nd Edition
+#LABEL_WEB_SELF|Self Made
+#LABEL_WEB_CLASSIC1|Classic-1st Edition ('solarlog-home')
+
+// Dialog: Lan - 16.07.10
+#LABEL_SMS_DIRECT|SMS direkt über Modem
+
+// Dialog: Einspeisemanagement - 20.07.10
+#LABEL_PM_REACTIVE_POWER_CONTROL|Blindleistungssteuerung 
+#LABEL_PM_FIX_COS_PHI|fester Verschiebungsfaktor cos(Phi)
+#LABEL_PM_FIX_REACTIVE_POWER|feste Blindleistung in Var
+#LABEL_PM_LINE_COS_PHI|variabler Verschiebungsfaktor cos(Phi) über Kennlinie
+#LABEL_PM_LINE_REACTIVE_POWER|variable Blindleistung über Kennlinie
+#LABEL_PM_CONTR_COS_PHI|steuerbarer Verschiebungsfaktor cos(Phi) 
+#LABEL_PM_VAR|Var
+#LABEL_PM_COS_PHI|Cos(Phi)
+#LABEL_PM_FROM|Von
+#LABEL_PM_TO|Bis
+#LABEL_PM_REACTIVE_POWER|Blindleistung
+#LABEL_PM_ACTIVE_POWER|Wirkleistung
+#LABEL_PM_P_PN|P/Pn
+#LABEL_PM_UNDER_EXCITED|induktiv
+#LABEL_PM_STEP|Stufe
+#LABEL_PM_EXAMPLE_COS_LINE1|Beispiel oben:
+#LABEL_PM_EXAMPLE_COS_LINE2|Von P/Pn 0.20    Cos(Phi) 0.95 
+#LABEL_PM_EXAMPLE_COS_LINE3|Bis P/Pn 0.80    Cos(Phi) 0.95   induktiv
+#LABEL_PM_EXAMPLE_RAP_LINE1|Beispiel oben:
+#LABEL_PM_EXAMPLE_RAP_LINE2|Von Wirkleistung 2500 W Blindleistung 0 Var 
+#LABEL_PM_EXAMPLE_RAP_LINE3|Bis Wirkleistung 5000 W Blindleistung 1400 Var
+
+// Dialog: Wechselrichter - 02.08.10
+#LABEL_ACCESS_KEY_I|Schlüssel I
+#LABEL_ACCESS_KEY|Authorisierungsschlüssel für IEC60870
+#LABEL_ACCESS_KEY_II|Schlüssel II
+#LABEL_ACCESS_KEY_III|Schlüssel III
+#LABEL_ACCESS_KEY_CUR|Schlüssel Allgemein
+#LABEL_DIGITAL_COUNTER_AVAIL|Stromzähler am S0-Eingang
+#LABEL_ENERGY_METER_INV|Wechselrichter-Modus
+#LABEL_ENERGY_METER_YIELD|Gesamtertragszähler
+#LABEL_ENERGY_METER_USAGE|Verbrauchszähler
+#LABEL_DIGITAL_COUNTER_AVAIL|Stromzähler am S0-Eingang
+#LABEL_MODULFIELD|Modulfeld (1-9)
+#LABEL_IMPULSFACTOR|Impulsfaktor
+#LABEL_MPP1|MPP-Tracker 1
+#LABEL_MPP2|MPP-Tracker 2
+#LABEL_MPP3|MPP-Tracker 3
+
+// Dialog: System - 07.10.10
+#LABEL_CHOOSE_COUNTRY|Land wählen
+#LABEL_COUNTRY_LOAD|Aktivieren
+#LABEL_DST_SETTING|Sommerzeiteinstellung
+
+// Dialog: Wechselrichter - 11.10.10
+#LABEL_METER_ADDR_FEEDIN|Adresse Bezugs-/Einspeisezähler
+#LABEL_METER_ADDR_PRODUCE|Adresse Produktionszähler
+
+// Dialog: Anfangskonfiguration - 30.11.10
+#LABEL_CHOOSE_INV_E|Wechselrichter an Netzwerk
+
+// Dialog: Powermanagement - 10.12.10
+#LABEL_HARDWARE_UPDATE|(Hardwareupdate erforderlich !!!)
+
+// Dialog: Wechselrichtertausch - 08.01.11
+#LABEL_EXCHANGE_TITEL|Wechselrichtertausch
+#LABEL_EXCHANGE_DESC1|Die Wechselrichter können innerhalb des Schnittstellen
+#LABEL_EXCHANGE_DESC2|bereichs (gleiche Farbe) getauscht werden.
+#MENU_EXCHANGE|WR-Tausch
+#LABEL_EXCHANGE_SCANNING|Wechselrichter Nacherkennung starten
+#LABEL_EXCHANGE_NO_MANUAL|Funktion nur möglich, wenn Adressen nicht am WR eingestellt werden können
+
+// Dialog: SCB-Knubix - 18.02.11
+#LABEL_SENSORBOX|Sensorbox
+#LABEL_SENSOR_OUTSIDE_TEMP|Sensor für Außentemperatur angeschlossen
+#LABEL_SENSOR_WIND|Windsensor angeschlossen
+
+// Dialog: WLAN-Konfiguration - 08.01.11
+#LABEL_WLAN_TITEL|WLAN
+#LABEL_WLAN_SELECT|Netzwerkauswahl
+#LABEL_WLAN_SECURITY|Sicherheitseinstellungen
+#LABEL_WLAN_IPSETTINGS|IP-Einstellungen
+#LABEL_WLAN_KEY|Netzwerkschlüssel
+#MENU_WLAN|WLAN
+#LABEL_WLAN_SCANNING|Nach Drahtlosnetzwerken suchen 
+#LABEL_WLAN_AUTOMATIC|automatisch ermitteln
+#LABEL_WLAN_NAME|Netzwerkname (SSID)
+#LABEL_WLAN_ENCRYPTION|Verschlüsselung
+#LABEL_WLAN_CONNECTED|Verbunden
+#LABEL_WLAN_DISCONNECTED|Getrennt
+#LABEL_WLAN_DISABLED|Deaktiviert
+#LABEL_WLAN_SLERROR|SL Offline
+#LABEL_WLAN_INITIALIZING|Initialisierung
+
+// Dialog: Mainmenu - 12.04.11
+#LABEL_NUM_METER|Anzahl Stromzähler
+#LABEL_NUM_SENSOR|Anzahl Sensoren
