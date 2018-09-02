@@ -1,5 +1,7 @@
 # Ayasli Ges Solar Prediction
 ## To do list
+* 18 missing data points at 11.06.2018 should i remove it?
+
 
 ### Journal
 * Paper template added. Start writing. (In Process) 
