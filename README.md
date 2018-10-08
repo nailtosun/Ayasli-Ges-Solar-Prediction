@@ -2,12 +2,14 @@
 ## Datasets
 
 ### Historical Weather Data
-I used [Darksky API](https://darksky.net/dev) for historical weather dataset. I wrote [Jupyter Notebook](https://github.com/nailtosun/Ayasli-Ges-Solar-Prediction/blob/master/Neural%20Network/Darksky-api/Datapulling.ipynb) which automate pulling data (basically automate http request then format the JSON file). You can use for your purposes it's open source. However ofter 1000 data point you should use API key which cost 1$ per 10000 data points.(I think it is really inexpensive). 
-
+I used [Darksky API](https://darksky.net/dev) for historical weather dataset. I wrote [Jupyter Notebook](https://github.com/nailtosun/Ayasli-Ges-Solar-Prediction/blob/master/Neural%20Network/Darksky-api/Datapulling.ipynb) which automate pulling data (basically automate http request then format the JSON file). You can use for your purposes it's open source. However ofter 1000 data point you should use API key which cost 1$ per 10000 data points.(I think it is really inexpensive).
+![Weather Data](/Results/weather_data.png)
 ### Solar Generation Data
-We used [Solar-Log](https://www.solar-log.com/en/) for logging the solar generation. Our system is 50kW rated PV system which located Ayaslı Research Center in METU. 
+We used [Solar-Log](https://www.solar-log.com/en/) for logging the solar generation. Our system is 50kW rated PV system which located Ayaslı Research Center in METU.
 
-## Algoritms 
+## Algoritms
+![15min](/Results/15min.png)
+![30min](/Results/30min.png)
 The algoritm we used are;
 * Neural Networks (classical way 2 hidden layer)
 * Recurrent Neural Network (RNN)
